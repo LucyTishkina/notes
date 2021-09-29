@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Overview of DNS</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Overview of DNS</h1><br/>Domain Name System<br />- translates human-readable names into computer-readable IP addresses<br />   → you only need to remember the web address<br />- Hierarchical<br />   → follow the path<br />- Distributed database<br />   → many DNS servers<br />   → 13 root server clusters<br />   → hundreds of generic top-level domains (gTLDs) - .com, .org, .net, etc<br />   → over 275 country code top-level domains (ccTLDs) - .us, .ca, .uk, etc<br /><br />The DNS hierarchy<br />                                                    .<br />                                  .com       .net         .edu      .org<br />                          .professormesser<br />                     www    live    mail    east            west<br />                                                trey katie      ethan   judy<br />                                                <br />Fully Qualified Domain Name (FQDN)<br />- <a href="http://www.professormesser.com">www</a><a href="http://www.professormesser.com">.</a><a href="http://www.professormesser.com">professormesser</a><a href="http://www.professormesser.com">.com</a><br />- trey.east.professor.com<br /> <br /> DNS process<br />                                                    <br />                                                    <br />Resolver -&gt; Local Name Server -&gt; Root Server<br />                                               &lt;- (ask the .com server)<br />                  Local Name Server -&gt; .com Name Server<br />                                                &lt;- location of ProfessorMesser.com Name Server<br />                  Local Name Server -&gt; ProfessorMesser.com Name Server<br />                     (stores in cache) &lt;- Returns IP address<br /><br />Internal vs external DNS<br />- Internal DNS<br />   → managed on internal servers<br />   → configured and maintained by the local team<br />   → contains DNS information about internal devices<br />   → DNS service on Windows Server<br />- External DNS<br />   → Managed by a third-party<br />   → Does not have internal device information<br />   → Google DNS, Quad9<br /><br />Third-party DNS<br />- managing DNS can be challenging<br />   → especially in large environments<br />- Outsourced the DNS<br />   → cloud-based DNS services<br />- Features not available on a privately-hosted DNS server<br />   → high-availability, low latency, and scaling options<br /><br /><br />                                                <br />                                 </div></body></html>

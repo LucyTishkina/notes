@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>VLAN Hopping</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">VLAN Hopping</h1><br/>VLAN hopping<br />- Define different VLANs<br />   → organizational, network engineering, security<br />- you only have access to your VLAN<br />   → good security best practice<br />- “hop” to another VLAN<br />   → this shouldn't happen<br />- two primary methods<br />   → switch spoofing<br />   → double tagging<br /><br />Switch spoofing<br />- some switches support automatic configuration<br />   → is the switch port for a device or is it a trunk?<br />- there's no authentication required<br />   → pretend to be a switch<br />   → send trunk negotiation<br />- now you've got a trunk link to a switch<br />   → send and receive from any configured VLAN<br />- switch administrators should disable trunk negotiation<br />   → administratively configure trunk interfaces and device/access interfaces<br /><br />Double tagging<br />- craft a packet that includes two VLAN tags<br />   → takes advantage of the “native” VLAN configuration<br />- the first native VLAN tag is removed by the first switch<br />   → the second “fake” tag is now visible to the second switch<br />   → packet is forwarded to the target<br />- this is a one-way trip<br />   → responses don't have a way back to the source host<br />   → Good for DoS<br />- don't put any devices on the native VLAN<br />   → change the native VLAN ID<br />   → force tagging of the native VLAN<br /><br />Double tagging<br /><br /><br />Attacker on VLAN 10 ----------------- Trunk (VLANs 10 and 20) ----------------------------- Victim on VLAN 20<br />                                                    Native VLAN is 10<br /><br />Ethernet | 802.1Q Tag: | 802.1Q Tag: | Data<br />Header    | VLAN 10      | VLAN 20      |<br /><br /></div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Stream and Block Ciphers</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Stream and Block Ciphers</h1><br/>Stream ciphers<br />- encryption is done one bit or byte at a time<br />   → high speed, low hardware complexity<br />- used with symmetric encryption<br />   → not used in asymmetric encryption<br />- the starting state should never be the same twice<br />   → key is often combined with an initialization vector (IV)<br /><br />Block ciphers<br />- encrypt fixed-length groups<br />   → often 64-bit or 128-bit blocks<br />   → pad added to short blocks<br />   → each block is encrypted or decrypted independently<br />- symmetric encryption<br />   → similar to stream ciphers<br />- block cipher modes of operation<br />   → avoid patterns in the encryption<br />   → many different modes to choose from<br /></div></body></html>

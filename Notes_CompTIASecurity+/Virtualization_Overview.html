@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Virtualization Overview</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Virtualization Overview</h1><br/>Virtualization<br />- One computer, many OS's<br />   → Mac OS X, Windows, and Linux all at the same time<br />- Separate OS, independent CPU, memory, network, etc.<br />   → but really one physical computer<br />- host-based virtualization<br />   → your normal desktop plus others<br />- standalone server that hosts virtual machines<br />   → enterprise-level<br />- been around since 1967<br />   → IMB mainframe virtualization<br /><br />The hypervisor<br />- Virtual Machine Manager<br />   → manages the virtual platform and guest OSs<br />- may require CPU that supports virtualization<br />   → can improve performance<br />- hardware management<br />   → CPU<br />   → Networking<br />   → Security<br /><br />Hypervisors<br />- Type II<br />   → Run on a host OS<br />   → On top of Windows, Linux, Mac Os X, etc.<br />- Type I<br />   → Bare metal, Embedded, Native<br />   → run directly with hardware, no additional OS needed<br />- application containerization<br />   → run an application without launching an entire VM<br />   → uses just the right resources for the application<br />   → everything you need to run the app is in the image (container/cell)</div></body></html>

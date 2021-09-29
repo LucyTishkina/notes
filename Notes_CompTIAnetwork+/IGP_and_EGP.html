@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>IGP and EGP</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">IGP and EGP</h1><br/>AS (Autonomous System)<br /><br />- Autonomous<br />   → existing as an independent entity<br />- Group of IP routes under common control<br />- RFC 1930, Section 3<br />   → “An AS is a connected group of one ore more IP prefixes run by one or more network operators which has a SINGLE and CLEARLY DEFINED routing policy”<br />- Important point of reference for discussing Interior Gateway Protocols (IGP) and Exterior Gateway Protocols (EGP)<br /><br /><br />IGP (Interior Gateway Protocol)<br />- used within a single autonomous system (AS)<br />   → not intended to route between AS <br />      ⇒ that's why there's EGP's<br />- IPv4 dynamic routing<br />   → OSPFv2 (Open Shortest Path First)<br />   → RIPv2 (Routing Information Protocol)<br />   → EIGRP (Enhanced Interior Gateway Routing Protocol)<br />- IPv6 dynamic routing<br />   → OSPFv3<br />   → EIGRP for IPv6<br />   → RIPng (RIP next generation)<br /><br />EGP (Exterior Gateway Protocol)<br />- used to route between autonomous system<br />   → leverages the IGP at the AS to handle local routing<br />- BGP (Border Gateway Protocol)<br />   → many organizations use BGP as their EGP</div></body></html>

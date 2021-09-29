@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Switch Interface Properties</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Switch Interface Properties</h1><br/>Basic Interface Configuration<br />Speed and duplex<br />- Speed: 10/100/1000<br />- Duplex: half/full<br />- Automatic and manual<br />- Needs to match on both sides<br />IP address management<br />- Layer 3 interfaces<br />- VLAN interfaces<br />- Management interfaces<br />- IP address, subnet mask/CIDR block, default gateway, DNS (optional)<br /><br />VLANs<br />- VLAN assignment<br />   → each device port should be assigned a VLAN<br />- Trunking<br />   → connecting switches together<br />   → multiple VLAN's in a single link<br />- Tagged and untagged VLANs<br />   → A non-tagged frame is on the default VLAN <br />      ⇒ Also called the native VLAN<br />   → Trunk ports will tag the outgoing frames<br />      ⇒ And remove the tag on incoming frames<br /><br />DMZ<br />- Demilitarized zone<br />   → an additional layer of security between the Internet and you<br /><br />Power over Ethernet (PoE)<br />- Power provided on an Ethernet cable<br />   → one wire for both network and electricity<br />   → phones, cameras, wireless access points<br />   → useful in difficult-to-power areas<br />- Power provided at the switch<br />   → Built-in power - endspans<br />   → In-line power injector - midspans<br />- Power modes<br />   → Mode A - power on the data pairs<br />   → Mode B - power on the spare pairs<br /><br />PoE: IEEE 802.3af-2003<br />- The original PoE specification<br />- Included in 802.3at<br />- Now part of the 802.3 standard<br />- 15.4 watts DC power<br />- Max current of 350mA<br /><br />PoE+: IEEE 802.3at-2009<br />- The updated PoE specification<br />- Now also part of the 802.3 standard<br />- 25.5 watts DC power<br />- max current 600mA<br /><br />Port mirroring<br />- Examine a copy of the traffic<br />   → Port mirror (SPAN - switch port analyzer), network tap<br />- No way to block (prevent) traffic<br />- useful configuration to get data to IPS</div></body></html>

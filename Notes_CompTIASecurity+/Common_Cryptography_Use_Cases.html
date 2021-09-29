@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Common Cryptography Use Cases</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Common Cryptography Use Cases</h1><br/>Finding the balance<br />- low power devices<br />   → mobile devices, portable systems<br />   → smaller symmetric key sizes<br />   → use elliptic curve cryptography (ECC) for asymmetric encryption<br />- low latency<br />   → fast computation time<br />   → symmetric encryption, smaller key sizes<br />- high resiliency<br />   → larger key sizes<br />   → encryption algorithm quality<br />   → hashing provides data integrity<br /><br />Use cases<br />- confidentiality<br />   → secrecy and privacy<br />   → encryption (file-level, drive-level, email)<br />- integrity<br />   → prevent modification of data<br />   → validate the contents with hashes<br />   → file downloads, password storage<br />- obfuscation<br />   → modern malware<br />   → encrypted data hides the active malware code<br />   → decryption occurs during execution<br />- authentication<br />   → password hashing<br />   → protect the original password<br />   → add salts to randomize the stored password hash<br />- non-repudiation<br />   → confirm the authenticity of data<br />   → digital signature provides both integrity and non-repudiation<br />- resource vs security constraints<br />   → an ongoing battle<br />   → browser support vs supported encryption<br />   → VPN software support vs supported algorithms<br /><br /><br /><br /></div></body></html>

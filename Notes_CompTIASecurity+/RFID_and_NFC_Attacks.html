@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>RFID and NFC Attacks</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">RFID and NFC Attacks</h1><br/>RFID (Radio-frequency identification)<br />- It's everywhere<br />   → access badges<br />   → inventory/assembly line tracking<br />   → pet/animal identification<br />   → anything that needs to be tracked<br />- radar technology<br />   → radio energy transmitted to the tag<br />   → RF powers the tag, ID is transmitted back<br />   → Bidirectional communication<br />   → some tag formats can be active/powered<br /><br />RFID attacks<br />- data capture<br />   → view communication<br />   → replay attack<br />- spoof the reader<br />   → write your own data to the tag<br />- denial of service<br />   → signal jamming<br />- decrypt communication<br />   → many default keys are on Google<br /><br />Near field communication (NFC)<br />- two-way wireless communication<br />   → builds on RFID, which mostly one-way<br />- payment systems<br />   → Google wallet and MasterCard partnership<br />- Bootstrap for other wireless<br />   → NFC helps with Bluetooth pairing<br />- Access token, identity “card”<br />   → Short range with encryption support<br /><br />NFC security concerns<br />- remote capture<br />   → it's a wireless network<br />   → 10 m for active devices<br />- frequency jamming<br />   → denial of service<br />- relay/replay attack<br />   → Man in the middle<br />- Loss of RFC device control<br />   → stolen/lost phone<br /><br /></div></body></html>

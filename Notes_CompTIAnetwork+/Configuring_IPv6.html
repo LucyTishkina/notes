@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Configuring IPv6</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Configuring IPv6</h1><br/>Dual-stack routing<br /><br />- Dual-stack IPv4 and IPv6<br />   → Run both at the same time<br />   → Interfaces will be assigned multiple address types<br />- IPv4<br />   → configured with IPv4 address<br />   → maintains an IPv4 routing table<br />   → uses IPv4 dynamic routing protocols<br />- IPv6<br />   → configure with IPv6 addresses<br />   → maintains an IPv6 routing table<br />   → uses IPv6 dynamic routing protocols<br /><br />Tunneling IPv6<br />- 6to4 addressing<br />   → Send IPv6 over an existing IPv4 network<br />   → creates an IPv6 address based on the IPv4 address<br />   → requires relay routers<br />      ⇒ IP protocol 41 - a transition technology<br />   → No support for NAT<br />- 4in6 tunneling<br />   → tunnel IPv4 traffic on an IPv6 network<br /><br />Teredo/Miredo<br />- Tunnel IPv6 through NATed IPv4<br />   → end-to-end IPv6 through an IPv4 network <br />   → no special IPv6 router needed<br />   → temporary use<br />      ⇒ We'll have IPv6 native networks soon (?)<br /><br />Miredo<br />- open-source Teredo for Linux, BSD Unix, and Mac OS X<br />- full functionality<br /><br />NDP (Neighbor Discovery Protocol)<br />- No broadcasts<br />   → Operates using multicast with ICMPv6<br />- Neighbor MAC Discovery<br />   → Replaces the IPv4 ARP<br />- SLAAC (Stateless Address Autoconfiguration)<br />   → Automatically configure an IP address without a DHCP server<br />- DAD (Duplicate Address Detection)<br />   → No duplicate ID's!<br />- Discover routers<br />   → Router Solicatation (RS) and Router Advertisement (RA)<br /><br />Finding router<br />- ICMPv6 adds the Neighbour Discovery Protocol<br />- Router Solicitation (RS) messages as multi-cast<br />- Router Advertisiment (RA) messages as unicast with router info<br />- Routers also send unsolicited RA messages<br />   → from the multicast destination of ff02::1<br />- Transfer IPv6 address information, prefix value, and prefix length, etc.<br /><br />MAC address resolution<br />- there's no ARP in IPv6<br />   → so how do you find out the MAC address of a device?<br />- Neighbour Solicitation (NS)<br />   → sent as a multicast<br />- Neighbour Advertisment (NA)<br />- NS can also be used to test for duplicate IPv6 addresses<br /><br /><br /></div></body></html>

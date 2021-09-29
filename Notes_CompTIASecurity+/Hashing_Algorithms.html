@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Hashing Algorithms</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Hashing Algorithms</h1><br/>MD5 Message Digest Algorithm<br />- Designed by Ronald Rivest<br />   → one of the “fathers” of modern cryptography<br />- first published: April 1992<br />   → replaced MD4<br />   → 128-bit hash value<br />- 1996: vulnerabilities found<br />   → not collision resistant<br />- December 2008: researchers created CA certificate that appeared legitimate when MD5 is checked<br />   → built other certificates that appeared to be legit and issued by RapidSSL<br /><br />Secure Hash Algorithm (SHA)<br />- developed by the National Security Agency (NSA)<br />   → A US Federal Information Processing Standard (FIPS)<br />- SHA-1<br />   → widely used<br />   → 160-bit digest<br />   → 2005: collision attacks published<br />- SHA-2<br />   → the preferred SHA variant<br />   → up to 512-bit digests<br />   → SHA-1 is now retired for most US Government use<br /><br />HMAC<br />- Hash-based Message Authentication Code<br />   → combine a hash with a secret key<br />   → e.g., HMAC-MD5, HMAC-SHA1<br />- verify data integrity and authenticity<br />   → no fancy asymmetric encryption required<br />- used in network encryption protocols<br />   → IPsec, TLS<br /><br />RIPEMD<br />- a family of message digest algorithms<br />   → RACE Integrity Primitives Evaluation Message Digest<br />- RACE<br />   → Research and Development in Advanced Communications Technologies in Europe<br />   → created to help with Integrated Broadband Communications in Europe<br />   → centralized cryptographic standards and management<br />- Original RIPEMD was found to have collision issues (2004)<br />   → effectively replaced with RIPEMD-160 (no known collision issues)<br />   → based upon MD4 design but performs similar to SHA-1<br />   → RIPEMD-128, RIPEMD-256, RIPEMD-320<br /><br /></div></body></html>

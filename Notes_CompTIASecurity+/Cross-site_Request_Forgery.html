@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Cross-site Request Forgery</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Cross-site Request Forgery</h1><br/>Cross-site Request Forgery<br />- one-click attack, session riding<br />   → XSRF, CSRF (sea surf)<br />- take advantage of the trust that a web application has for the user<br />   → the web site trusts your browser<br />- significant web application development oversight<br />   → the application should have anti-forgery techniques added<br />   → usually a cryptographic token to prevent a forgery<br /><br />CSRF<br /><br /><br />1) bad guy creates a  funds transfer          2) Request is sent as a hyperlink to a user who may already be logged into the bank web site<br />bad guy------------------------------------------------------------------→ Bank site visitor<br /><br /><br />3) Visitor clicks the link and unknowingly sends the transfer request to the bank web site<br />Bank site visitor -------------------------------------------------→ Bank web server<br /><br /><br />4) Bank validates the transfer and sends the visitor's funds to the bad guy<br />Bank web server -------------------------------------------→ Bad guy<br /><br /><br /></div></body></html>

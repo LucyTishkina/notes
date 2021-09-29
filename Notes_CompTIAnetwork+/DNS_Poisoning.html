@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>DNS Poisoning</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">DNS Poisoning</h1><br/>DNS poisoning<br />- Modify the DNS server<br />   → requires some crafty hacking<br />- modify the client host file<br />   → the host file take precedent over DNS queries<br />- send a fake response to a valid DNS request<br />   → requires a redirection of the original request or the resulting response<br /><br />DNS spoofing/poisoning<br /><br /><br />User 1 ---------------------------------------------------------------- --------------------------------------DNS Server<br />professormesser.com = 162.159.246.164            |                        professormesser.com = 162.159.246.164<br />                                                                           |<br />                              Bad guy professormesser.com = 100.100.100.100<br /><br />                              <br />User 2 ---------------------------------------------------------------- --------------------------------------DNS Server<br />professormesser.com = 100.100.100.100            |                        professormesser.com = 100.100.100.100<br />                                                                           |<br />                              Bad guy professormesser.com = 100.100.100.100<br />                              <br /></div></body></html>

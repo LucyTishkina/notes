@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Security in the Cloud</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Security in the Cloud</h1><br/>On-premise, hosted, and cloud<br />- On-premise<br />   → your application are on local hardware<br />   → your servers are in your data center in your building<br />- hosted<br />   → your servers are not in your building<br />   → they many not even be running on your hardware<br />   → usually a specialized computing environment<br />- Cloud<br />   → entire application instances can be created and torn down on-demand<br />   → resources are available as needed<br /><br />Cloud storage<br />- data is available anywhere, anytime, on any device<br />   → if you have a network, you have your data<br />- integrates with your enterprise authentication<br />   → use your network login to access your data<br />   → can include two factor authentication (2FA)<br />- encryption is required<br />   → data is not under your direct control<br />   → strong encryption mechanisms are critical<br /><br />VDI (Virtual Desktop Infrastructure)<br />- virtualize the user's desktop and run it in the data center<br />   → Sometimes called VDE (Virtual Desktop Environment)<br />- all of the computing power is in the data center<br />   → the end-user hardware is a “virtual desktop”<br />   → relatively small computing requirements on the client workstation<br />   → the end-user OS becomes less important<br />- enhanced security<br />   → centralized and easier to manage<br />   → changes can be tightly controlled<br />   → the data never leaves the data center<br /><br />Cloud access security broker (CASB)<br />- clients are at work, data is in the cloud<br />   → how do you keep everything secure?<br />   → the organization already has well-defined security policies<br />- how do you make your security policies work in the cloud?<br />   → integrate a CASB<br />   → implemented as client software, local security appliances, or cloud-based security solutions<br />- visibility<br />   → determine what apps are in use<br />   → are they authorized to use the apps?<br />-  compliance<br />   → are users complying with HIPAA? PCI?<br />- threat prevention<br />   → allow access by authorized users, prevent attacks<br />- data security<br />   → ensure that all data transfers are encrypted<br />   → protect the transfer of PII with DLP<br /><br />Security as a Service (SECaaS)<br />- instead of managing your own security solution, move it to the cloud<br />   → pay for what you use<br />   → scale up and down as needed<br />- continuously monitoring<br />   → uniformly applies to all traffic<br />- anti-virus/anti-malware signatures are constantly updated<br />   → block emerging threats without deploying updates</div></body></html>

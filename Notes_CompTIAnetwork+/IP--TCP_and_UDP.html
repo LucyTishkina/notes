@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>TCP and UDP</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">TCP and UDP</h1><br/>Operate on OSI Layer 4 (the transport layer)<br /><br />Allows for multiplexing<br /><br />TCP - Transmission Control Protocol<br />- connection-oriented<br />- formal connection set-up and close<br />- “reliable” delivery - expect an ack<br />- recovery from errors<br />- packets are numbered - can deal with out-of-order messages or retransmissions<br />- the receiver can manage how much data is set<br /><br />UDP - User Datagram Protocol<br /><br />-connectionless<br />-no formal or open connection<br />-"unreliable" delivery - no ack<br />- no error recovery<br />- no reordering of data or retransmissions<br />- no flow control - no feedback from the receiver, sender determines rate of data transmission</div></body></html>

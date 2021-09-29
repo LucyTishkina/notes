@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Secure Configuration Guides</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Secure Configuration Guides</h1><br/>Secure configurations<br />- no system is secure with the default configuration<br />   → you need some guidelines to keep everything safe<br />- hardening guides are specific to the software or platform<br />   → get feedback from the manufacturer or Internet interest group<br />   → they'll have the best details<br />- other general-purpose guides are available online<br /><br />Web server hardening<br />- access a server with your browser<br />   → the fundamental server on the Internet<br />   → Microsoft Internet Information Server, Apache HTTP Server, et al.<br />- Huge potential for access issues<br />   → data leaks, server access<br />- secure configuration<br />   → information leakage: banner information, directory browsing<br />   → permissions: run from a non-privileged account, configure file permissions<br />   → Configure SSL: manage and install certificates<br />   → log files: monitor access and error logs<br /><br />Operating system hardening<br />- many and varied<br />   → Windows, Linux, iOS, Android, etc<br />- Updates<br />   → OS updates/ service packs, security patches<br />- User accounts<br />   → min password lengths and complexity<br />   → account limitations<br />- network access and security<br />   → limit network access<br />- monitor and secure<br />   → anti-virus, anti-malware<br /><br />Application server<br />- programming languages, runtime libraries, etc<br />   → usually between the web server and the database<br />   → middleware<br />- very specific functionality<br />   → disable all unnecessary services<br />- OS updates<br />   → security patches<br />- file permissions and access controls<br />   → limit rights to what's required<br />   → limit access from other devices<br /><br />Network infrastructure devices<br />- switches, routers, firewalls, IPS, etc.<br />   → you never see them, but they're always there<br />- purpose-built devices<br />   → embedded OS, limited OS access<br />- configure authentication<br />   → don't use the defaults<br />- check with the manufacturer<br />   → security updates<br />   → not usually updated frequently <br />   → updates are usually important<br /><br /></div></body></html>

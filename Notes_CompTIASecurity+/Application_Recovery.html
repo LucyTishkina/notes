@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Application Recovery</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Application Recovery</h1><br/>Order of restoration<br />- not all applications have the same priority<br />   → some are more important than others<br />- this list should be defined well before it's needed<br />   → organization management sets the priority<br />- the order may change based on the calendar<br />   → monthly/quarterly applications may take priority<br /><br />Backup strategies<br />- backup technologies<br />   → tape, disk, optical<br />- database backups<br />   → replication - online duplicates<br />   → online backups - specialized backup process for databases<br />- email database backups<br />   → provide server, database, mailbox, or message backup and restore<br />- snapshots<br />   → OS volume snapshots or hypervisor snapshots<br />- system backups<br />   → bare metal backup using images<br /><br />File backups<br />- the archive attribute<br />   → set when a file is modified<br />- full<br />   → everything <br />   → you'll want this one first<br />- incremental<br />   → all files changed since the last incremental backup<br />- differential<br />   → all files changed since the last full backup<br /><br />Full Backup              Incremental    Incremental     Incremental<br />- reset archive bit                                                  <br />Monday                     Tuesday         Wednesday      Thursday<br /><br />Full Recovery = Full Backup + Tuesday's incremental + Wednesday's incremental + Thursday's incremental<br /><br />Differential backup<br /><br />Full Backup              Differential    Differential      Differential<br />- reset archive bit                                               <br />Monday                     Tuesday       Wednesday      Thursday<br /><br />Full Recovery = Full Backup + Thursday's Differential<br /><br />Backup types<br /><br />Type                  Data selection                      Backup / Restore Time          Archive attribute<br />Full                    All selected data                   High/Low (one tape set)       cleared<br /><br /><br />Incremental      new files and files modified    Low/High                             cleared<br />                        since the last backup              (multiple tape sets)<br /><br /><br />Differential        all data modified since            Moderate/Moderate             not cleared<br />                       the last full backup                  (no more than 2 sets)<br /></div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Denial of Service</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Denial of Service</h1><br/>Denial of Service<br />- Force a service to fail<br />   → overload the service<br />- take advantage of a design failure or vulnerability<br />   → keep your systems patched!<br />- cause a system to be unavailable<br />   → competitive advantage<br />- create a smokescreen for some other exploit<br />   → precursor to a DNS spoofing attack<br />- Doesn't have to be complicated<br />   → turn off the power<br /><br />A “friendly” DoS<br />- unintentional DoS<br />- network DoS<br />   → Layer 2 loop without STP<br />- Bandwidth DoS<br />   → downloading multi-gigabyte Linux distributions over a DSL line<br />- The water line breaks<br />   → get a good shop vacuum<br /><br />Distributed Denial of Service (DDoS)<br />- launch an army of computers to bring down a service<br />   → use all the bandwidth or resources - traffic spike<br />- this is why the bad guys have botnets<br />   → 1000's or 1000000's of computers at your command<br />   → at its peak Zeus botnet infected over 3.6 million PCs<br />   → coordinated attack<br />- Asymmetric threat<br />   → the attacker may have fewer resources than the victim<br /><br />DDoS amplification<br />- turn your small attack into a big attack<br />   → often reflected off another device or service<br />- an increasingly common DDoS technique<br />   → turn Internet services against the victim<br />- uses protocols with little (if any) authentication or checks<br />   → NTP, DNS, ICMP<br />- a common example of protocol abuse<br /><br /><br />Turning up the volume <br />- Example DNS keys are very long<br />- small amount of inbound information causing a large amount of outbound information<br /><br />DNS amplification DDoS<br /><br />                                                                                       Open DNS Resolvers<br />Botnet Command                                                                           |<br />and Control ------------------------------------- Botnet --------------------------- Internet --------------------------- Web Server<br />(C&amp;C)<br /><br />- spoof the request source to be the Web Server to overwhelm it with responses<br /><br /><br /></div></body></html>

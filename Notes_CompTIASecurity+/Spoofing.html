@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Spoofing</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Spoofing</h1><br/>Spoofing<br />- pretend to be something you aren't<br />   → fake web server, fake DNS server, etc.<br />- email address spoofing<br />   → the sending address of an email isn't really the sender<br />- caller ID spoofing<br />   → the incoming call information is completely fake<br />- Man-in-the-middle attacks<br />   → the person in the middle of the conversation pretends to be both endpoints<br /><br />MAC spoofing<br />- Your Ethernet device has a MAC address<br />   → a unique burned-in address<br />   → most drivers allow you to change this<br />- changing the MAC address can be legitimate<br />   → internet provider expects a certain MAC address<br />   → certain applications require a particular MAC address<br />- It might not be legitimate<br />   → circumvent MAC-based ACLs<br />   → fake-out a wireless address filter<br />- very difficult to detect<br />   → how do you know it's not the original device?<br /><br />IP address spoofing<br />- take someone else's IP address<br />   → actual device<br />   → pretend to be somewhere you are not<br />- can be legitimate<br />   → load balancing<br />   → load testing<br />- may not be legitimate<br />   → ARP poisoning<br />   → DNS amplification/DDoS<br />- Easier to identify than MAC address spoofing<br />   → apply rules to prevent invalid traffic, enable switch security<br /><br /></div></body></html>

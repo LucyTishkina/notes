@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Redundancy, Fault Tolerance, and High Availability</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Redundancy, Fault Tolerance, and High Availability</h1><br/>Distributive allocation<br />- the bad guys are looking for your data<br />   → most people keep it in the data center<br />- web servers, database servers, middleware, security devices, monitoring systems<br />   → many devices are required to maintain an application instance<br />- don't keep everything in one place<br />   → critical assets, data, and other system should be in different places<br />   → easier to add security between the segmented areas<br />   → makes it more difficult to target and exploit an application instance<br /><br />Redundancy and fault tolerance<br />- maintain uptime<br />   → the organization continues to function<br />- no hardware failure<br />   → servers keep running<br />- no software failure<br />   → services are available<br />- no system failure<br />   → network performing optimally<br />- redundant hardware components<br />   → multiple devices, load balancing power supplies<br />- RAID<br />   → Redundant Array of Independent Disks<br />- Uninterruptible power supplies (UPS)<br />   → prepare for disconnections<br />- Clustering<br />   → a logical collective of servers<br />- load balancing<br />   → share service load across components<br /><br />RAID<br /><br />RAID 0 - striping without parity, high performance, no fault tolerance<br />RAID 1 - Mirroring, duplicates data for fault tolerance, twice the disk space<br />RAID 5- striping with parity - fault tolerant, only requires an additional disk for redundancy<br />RAID 0+1, RAID 1+0, RAID 5+1, etc. - Multiple RAID types, combine RAID methods to increase redundancy<br /><br />High availability<br />- redundancy doesn't always mean always available<br />   → may need to be enable manually<br />- HA (high availability)<br />   → always on, always available<br />- may include many different components working together<br />   → watch for single points of failure</div></body></html>

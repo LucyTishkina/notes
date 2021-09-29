@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Prioritizing Traffic</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Prioritizing Traffic</h1><br/>Managing network traffic<br />- many different devices<br />   → desktop, laptop, VoIP phone, mobile devices<br />- many different applications<br />   → mission critical applications, streaming video, streaming audio<br />- Different apps have different network requirements<br />   → Voice is real-time<br />   → Recorded streaming video has a buffer<br />   → Database application is interactive<br />- Some applications are “more important” than others<br />   → Voice traffic needs to have priority over YouTube<br /><br />Packet shaping<br />- Or traffic shaping<br />- Control bandwidth usage or data rates<br />- Set important applications to have higher priorities than other apps<br />- Can be implemented in Firewall, Router or Switch<br /><br />QoS (Quality of Service)<br />- Prioritize traffic performance<br />   → Voice over IP traffic has priority over web-browsing<br />   → Prioritize by maximum bandwidth, traffic rate, VLAN, etc.<br />- Quality of Service<br />   → Describes the process of controlling traffic flows<br />- Many different methods<br />   → across many different topologies<br /><br />Managing QoS<br />- CoS (Class of service)<br />   → OSI Layer 2<br />   → Ethernet frame header in an 802.1Q trunk<br />   → Usually applied in the intranet (not from an ISP)<br />- Differentiated Services (DiffServ)<br />   → OSI Layer 3<br />   → QoS bits are enabled in the IPv4 header<br />   → Bits are set external to the application<br />   → Routers apply the QoS<br />- DSCP (Differentiated Services Code Point)<br />   → DS (Differentiated Services) field in the IP header</div></body></html>

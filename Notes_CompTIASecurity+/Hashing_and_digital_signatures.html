@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Hashing and digital signatures</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Hashing and digital signatures</h1><br/>Hashes<br />- represent data as a short string of text<br />   → a message digest<br />- one-way trip<br />   → impossible to recover the original message from the digest<br />   → used to store passwords/confidentiality<br />- verify a download document is the same as the original<br />   → integrity<br />- can be a digital signature<br />   → authentication, non-repudiation, and integrity<br />- will not have a collision (hopefully)<br />   → different messages will not have the same hash<br /><br />A hash example<br />- SHA256 hash<br />   → 256 bits / 64 hexadecimal characters<br /><br />Collision<br />- hash functions<br />   → take an input of any size<br />   → create a fixed size string<br />   → message digest, checksum<br />- the hash should be unique<br />   → different inputs should never create the same hash<br />   → if they do, it's a collision<br />- MD5 has a collision problem<br />   → Found in 1996<br />   → Don't use MD5<br /><br />Practical hashing<br />- verify a downloaded file<br />   → hashes may be provided on the download site<br />   → compare the downloaded file hash with the posted hash value<br />- password storage <br />   → instead of storing the password, store a salted hash<br />   → compare hashes during the authentication process<br />   → nobody ever knows your actual password<br /><br />Digital signatures<br />- prove the message was not changed<br />   → integrity<br />- prove the source of the message<br />   → authentication<br />- make sure the signature isn't fake<br />   → non-repudiation<br />- sign with the private key<br />   → the message doesn't need to be encrypted<br />   → nobody else can sign this (obviously)<br />- verify with the public key<br />   → any change in the message will invalidate the signature<br /><br />Creating a digital signature<br /><br />Alice's computer<br />Hash of plaintext -&gt; encryption with private key =&gt; digital signature (send along with the plaintext)<br /><br />Verifying a digital signature<br />Bob's laptop<br />Decrypt digital signature with Alice's public key -&gt; hash of plaintext compare to results of hashing plaintext<br /><br /><br /></div></body></html>

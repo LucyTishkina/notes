@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Symmetric Algorithms</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Symmetric Algorithms</h1><br/>DES<br />- Data Encryption Standard<br />   → DES and Triple DES<br />- developed between 1972 and 1977 by IBM and the NSA<br />   → one of the Federal Information Processing Standards (FIPS)<br />- 64-bit block cipher<br />   → 56-bit key (very small in modern terms)<br />- easily brute-forced with today's technology<br /><br />3DES<br />- Triple DES<br />   → extends the use of the DES cipher<br />- 3 different keys is the strongest 3DES encryption method<br />   → 2 separate keys is deprecated, a single key isn't allowed<br />- use DES encryption/decryption 3 times<br />   → encrypt with 1ts key<br />   → decrypt with 2nd key<br />   → encrypt with 3rd key<br />- superseded by AES<br />   → Advanced Encryption Standard<br /><br /><br />Plaintext encrupted with DES key 1 =&gt; Ciphertext decrypted with DES key 2 =&gt; Ciphertext encrypted with DES key 3 =&gt; final ciphertext<br /><br /><br />RC4<br />- Rivest Cipher 4<br />   → Ron Rivest (Ron's Code 4)<br />- part of the ill-fated WEP standard<br />   → also part of SSL, but removed from TLS<br />- RC4 has “biased output”<br />   → if the 3rd byte of the original state is zero and the 2nd byte is not equalt to two then the 2nd output byte is always 0<br />- not common to see RC4 these days<br />   → WPA2 moved to AES<br /><br />AES (Advanced Encryption Standard)<br />- US Federal Government Standard <br />   → FIPS 197 in 2001<br />   → it took 5 years to standardize this<br />   → developed by 2 Belgian cryptographers<br />      ⇒ Joan Daemen and Vincent Rijmen<br />- 128-bit block cipher<br />   → 128-, 192-, and 256-bit keys<br />- used in WPA2<br />   → powerful wireless encryption<br /><br />Blowfish and twofish<br />- Blowfish<br />   → designed in 1993 by Bruce Schneier<br />   → 64-bit block cipher, variable length key (1-488 bits)<br />   → no known way to break the full 16 rounds of encryption<br />   → one of the first secure ciphers not limited by patents<br />- twofish<br />   → successor to Blowfish<br />   → 128-bit block size, key sizes up to 256<br />   → designed by Bruce Schneier, John Kelsey, Doug Whiting, David Wagner, Chris Hall, and Niels Ferguson, Stefan Lucks, Tadayoshi Kohno, Mike Stay<br />   → no patent, public domain<br /><br /><br /><br /></div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Certificate File Formats</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Certificate File Formats</h1><br/>Certificate file formats<br />- X.509 digital certificates<br />   → the structure of the certification is standardized<br />   → the format of the actual certificate file can take many different forms<br />- there are many certificate file formats<br />   → you can convert between many of the formats<br />   → use openssl or a similar application to view the certificate contents<br /><br />DER (Distinguished Encoding Rules)<br />- format designed to transfer syntax for data structures<br />   → a very specific encoding format<br />   → perfect for an X.509 certificate<br />- binary format<br />   → not human-readable<br />- a common format<br />   → used across many platforms<br />   → often used with Java certificates<br /><br />PEM (Privacy-Enhanced Mail)<br />- a very common format<br />   → generally the format provided by CAs<br />   → supported on many different platforms<br />- ASCII format<br />   → letters and numbers<br />   → easy to email<br />   → readable<br /><br />PKCS #12<br />- Public Key Cryptography Standards #12<br />- Personal Information Exchange Syntax Standard<br />   → developed by RSA Security, now an RFC standard<br />- container format for many certificates<br />   → store many X.509 certificates in a single .p12 file<br />   → often used to transfer a private and public key pair<br />   → the container can be password protected<br />- extended from Microsoft's .pfx format<br />   → the two standards are very similar<br />   → often referenced interchangeably<br /><br />CER (certificate)<br />- primarily a Windows X.509 file extension<br />   →  can be encoded as binary DER format or as the ASCII PEM format<br />- usually contains a public key<br />   → private keys would be transferred in .pfx file format<br />- common format for Windows certificates<br />   → look for the .cer extension<br /><br />PKCS #7<br />- Public Key Cryptography Standards #7<br />- Cryptographic Message Syntax Standard<br />   → associated with the .p7b file<br />- stored in ASCII format<br />   → human-readable<br />- contains certificates and chain certificates<br />   → private keys are not included in a .p7b file<br />- Wide platform support<br />   → Microsoft Windows<br />   → Java Tomcat<br /><br /></div></body></html>

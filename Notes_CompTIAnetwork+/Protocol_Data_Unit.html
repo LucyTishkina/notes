@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Protocol Data Unit</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Protocol Data Unit</h1><br/>PDU (Protocol Data Unit)<br />- A unit of transmission<br />   → a different group of data at different OSI layers<br />- Ethernet operates on a frame of data<br />   → it has no idea what's inside<br />- IP operates on a packet of data<br />   → inside is TCP or UDP, but IP doesn't know that<br />- TCP or UDP PDU<br />   → TCP segment<br />   → UDP datagram<br /><br />Maximum Transmission Unit<br />- MTU<br />- Maximum IP packet to transmit<br />   → but not fragment<br />- Fragmentation slows things down<br />   → losing a fragment loses an entire packet<br />   → requires overhead along the path<br />- Difficult to know the MTU all the way through the path<br />   → Automated methods are often inaccurate<br />      ⇒ Especially when ICMP is filtered<br />Troubleshooting MTU<br />- MTU sizes are usually configured once<br />   → Based on the network infrastructure and don't change often<br />- A significant concern for tunnelled traffic<br />   → the tunnel may be smaller than your local Ethernet segment<br />- What if you send packets with Don't Fragment (DF) set?<br />   → Routers will respond back and tell you to fragment<br />   → Hope you get the ICMP message<br />- Troubleshoot using ping<br />   → ping with DF and force a maximum size of 1472 bytes <br />   → 1500 bytes - 8 byte ICMP header - 20 bytes IP address = 1472<br />      ⇒ Windows: ping -f -l 1472 8.8.8.8<br /><br /></div></body></html>

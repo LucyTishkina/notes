@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Static and Dynamic Routing</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Static and Dynamic Routing</h1><br/>Routing<br />- Send IP packets across the network<br />   → forwarding decisions are on based on destination IP address<br />- Each router only knows the next step<br />   → the packet asks for directions every hop along the way<br />   → the list of directions is held in a routing table<br /><br />Static Routing<br />- administratively define the routes<br />   → you're in control<br />- Advantages<br />   → easy to configure and manage on smaller networks<br />   → no overhead from routing protocols (CPU, memory, bandwidth)<br />   → easy to configure on sub networks (only one way out)<br />   → more secure - no routing protocols to analyze<br />- Disadvantages<br />   → difficult to administer on larger networks<br />   → no automatic method to prevent routing loops<br />   → if there's a network change, you have to manually update the routes<br />   → no automatic rerouting if an outage occurs<br /><br />Dynamic routing<br />- routers send routes to other routers<br />   → routing tables are updated in (almost) real-time<br />- advantages<br />   → no manual route calculations or management<br />   → new routes are populated automatically<br />   → very scalable<br />- disadvantages<br />   → some routes overhead required (CPU, memory, bandwidth)<br />   → requires some initial configuration to work properly<br /><br />Default route<br />- A route when no other route matches<br />   → the “gateway of last resort”<br />- a remote site may have only one route<br />   → go that way -&gt; rest of the world<br />- can dramatically simplify the routing process<br />   → works in conjunction with all other routing methods</div></body></html>

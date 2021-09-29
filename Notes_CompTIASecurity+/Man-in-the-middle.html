@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Man-in-the-middle</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Man-in-the-middle</h1><br/>Man-in-the-middle<br />- how can a bad guy watch without you knowing?<br />   → man-in-the-middle<br />- redirects your traffic<br />   → then passes it on to the destination<br />   → you never know your traffic was redirected<br />- ARP poisoning<br />   → ARP has no security<br /><br />ARP poisoning (spoofing)<br /><br /><br />192.168.1.9---------------------------&gt; who is 192.168.1.1? -----------------------&gt;192.168.1.1<br />c8:bc:c8:a7:38:d5                                                                          00:09:5b:d4:bb:fe<br /><br />192.168.1.9&lt;--------------------------- I am 192.168.1.1 &lt;-----------------------192.168.1.1<br />c8:bc:c8:a7:38:d5                    My MAC is   00:09:5b:d4:bb:fe         00:09:5b:d4:bb:fe<br /><br />ARP cache<br />192.168.1.1 = 00:09:5b:d4:bb:fe<br /><br /><br /><br />192.168.1.9------------------------------------------------------------192.168.1.1<br />c8:bc:c8:a7:38:d5                   |                               00:09:5b:d4:bb:fe<br />                                               |<br />                                         192.168.1.14<br />                                         aa:bb:cc:dd:ee:ff    <br />                                         <br /><br />192.168.1.9------------------------------------------------------------192.168.1.1<br />c8:bc:c8:a7:38:d5       \                                          00:09:5b:d4:bb:fe<br />                                    \  <br />                                     \ I am 192.168.1.1                                      <br />                                      \  My MAC is aa:bb:cc:dd:ee:ff<br />                                       \ <br />                                        \<br />                                         192.168.1.14<br />                                         aa:bb:cc:dd:ee:ff    <br />                                         <br />ARP cache gets updated<br />192.168.1.1 = aa:bb:cc:dd:ee:ff<br />- information now moves through 192.168.1.14<br /><br />Man-in-the-browser<br />- what if the middleman was on the same computer as the victim?<br />   → the calls are coming from inside the browser!<br />   → Malware/Trojan does all the proxy work<br />- Huge advantages for the bad guys<br />   → relatively easy to proxy encrypted traffic<br />   → everything looks normal to the victim<br />   → don't need to be on the local network<br />- the man-in-the-browser waits for you to login to your bank<br />   → and cleans you out</div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Network Switching</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Network Switching</h1><br/>The switch<br />- forward or drop frames<br />   → based on the destination MAC address<br />- Gather a constantly updating list of MAC addresses<br />   → builds the list based on the source MAC address of incoming traffic<br />- Maintain a loop-free environment<br />   → Using STP (Spanning Tree Protocol)<br /><br />Learning MAC's<br />- Switches examine incoming traffic<br />   → makes a note of the source MAC address<br />- Adds unknown MAC address<br />   → sets the output interface to the received interface<br />- Flooding of unknown MAC's<br />   → the switch doesn't always have a MAC address in the table<br />   → when in doubt, send the frame to everyone<br />   → the destination with the correct MAC address will keep the packet and all the other devices will drop the frame<br /><br />Address Resolution Protocol<br />- Determine a MAC address based on an IP address<br />   → you need the hardware address to communicate<br />- arp -a<br />   → view local ARP table</div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Asymmetric Algorithms</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Asymmetric Algorithms</h1><br/>Diffie-Hellman key exchange<br />- a key exchange method<br />   → over an insecure communication channel<br />- published in 1976<br />   → Witfield Diffie and Martin Hellman (and Ralph Merkle)<br />- DH does not itself encrypt or authenticate<br />   → it's an anonymous key-agreement protocol<br />- used for Perfect Forward Secrecy<br />   → Ephemeral Diffie-Hellman (EDH or DHE)<br />   → combine with elliptic curve cryptorgaphy for ECDHE<br />- use asymmetric cryptography to create a symmetric key<br /><br />Bob's private key + Alice's public key = symmetric key = Alice's private key + Bob's public key<br /><br />RSA<br />- Ron Rivest, Adi Shamir, and Leonard Adelman<br />   → Published the RSA cipher in 1977<br />- the first practical public-key cryptography system<br />   → encrypt, decrypt, digital signatures<br />- based on the product of two large prime numbers<br />   → you must know the factors to decode<br />- now released into the public domain<br />   → used extensively for web site encryption and digital rights management<br /><br />DSA (Digital Signature Algorithm<br />- a standard for digital signatures<br />   → modifies Diffie-Hellman for use in digital signatures<br />- a Federal Information Processing Standard for digital signatures<br />   → initially added in 1993 and updated through the years<br />- combine with elliptic curve cryptography<br />   → fast and efficient digital signatures<br />   → ECDSA - Elliptic Curve Digital Signature Algorithm<br /><br />Elliptic curve cryptography (ECC)<br />- used for encryption, digital signatures, pseudo-random generators, and more<br />- asymmetric encryption<br />   → need large integers composed of two or more large prime factors<br />- instead of numbers use curves<br />   → just as infeasible to find the discrete logarithm of a random elliptic curve element<br />   → uses smaller keys than non-ECC asymmetric encryption<br />   → Elliptic Curve Digital Signature Algorithm (ECDSA)<br /><br />PGP (Pretty Good Privacy) and GPG<br />- popular asymmetric encryption<br />   → created by Phil Zimmerman in 1991 <br />   → “Why I wrote PGP”<br />   → commercial software<br />   → owned by Symantec<br />- Open standard - OpenPGP (RFC 4880)<br />   → implemented as software: GNU Privacy Guard (GPG)<br />      ⇒ Linux, Windows, Mac OS, others<br />      ⇒ very compatible with commercial PGP<br /><br /><br /><br /><br /></div></body></html>

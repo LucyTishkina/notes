@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Network Access Control</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Network Access Control</h1><br/>Edge vs access control<br />- control at the edge<br />   → your Internet link<br />   → managed primary through firewall rules<br />   → firewall rules rarely change<br />- access control<br />   → control from wherever you are<br />      ⇒ inside or outside<br />   → access can be based on many rules<br />      ⇒ by user, group, location, application, etc.<br />   → access can be easily revoked or changed<br />      ⇒ change your security posture at any time<br /><br />Posture assessment<br />- You can't trust everyone's computer<br />   → BYOD (Bring Your Own Device)<br />   → Malware infections/missing anti-malware<br />   → Unauthorized applications<br />- Before connecting to the network, perform a health check<br />   → is it a trusted device?<br />   → is it running anti-virus? which one? it is updated?<br />   → are the corporate applications installed?<br />   → is it a mobile device? is the disk encrypted?<br />   → the type of device doesn't matter - Windows, Mac, Linux, iOS, Android<br /><br />Health checks/posture assessment<br />- persistent agents<br />   → permanently installed onto a system<br />   → periodic updates may be required<br />- dissolvable agent<br />   → no installation required<br />   → runs during the posture assessment<br />   → terminates when no longer required<br />- agentless NAC<br />   → integrated with Active Directory<br />   → checks are made during login and logoff<br />   → can't be scheduled<br /><br />Failing your assessment<br />- what happens when a posture assessment fails?<br />   → too dangerous to allow access<br />- quarantine network, notify administrators<br />   → just enough network access to fix the issue<br />- once resolved, try again<br />   → may require additional fixes<br />-</div></body></html>

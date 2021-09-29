@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Replay Attacks</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Replay Attacks</h1><br/>Replay attack<br />- useful information is transmitted over the network<br />   → a crafty hacker will take advantage of this<br />- need access to the raw network data<br />   → Network tap, ARP poisoning, Malware on the victim computer<br />- The gathered information may help the bad guy<br />   → replay the data to appear as someone else<br />- This is not a MitM attack<br />   → the actual replay doesn't require the original workstation<br /><br />Pass the hash<br /><br />Bad guy captured authentication<br />- username and hashed password<br /><br />Bad guy sends his own authentication request<br />- using the previously captured information<br /><br />Username and hash match a valid account<br />- bad guy gains access<br /><br />Avoid this type of replay attach with a salt or encryption<br />- use a session ID with the password hash to create a unique authentication hash each time<br /><br /></div></body></html>

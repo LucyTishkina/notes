@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Wireless Authentication and Security</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Wireless Authentication and Security</h1><br/>EAP<br />- EAP<br />   → Extensible Authentication Protocol<br />- An authentication framework<br />- Many different ways to authenticate based on RFC standards<br />- WPA and WPA2 use five EAP types as authentication mechanisms<br /><br />EAP types<br />- EAP-FAST<br />   → EAP Flexible Authentication via Secure Tunneling<br />      ⇒ Cisco's proposal to replace LEAP - Lightweight EAP - previously used with WEP<br />      ⇒ Lightweight and secure<br />- EAP-TLS (EAP Transport Layer Security)<br />   → Storng security, wide adoption<br />   → support from most of the industry<br />- EAP-TTLS (EAP Tunneled Transport Layer Security)<br />   → support other authentication protocols in a TLS tunnel<br />   → use any authentication you can support, maintain security with TLS<br /><br />PEAP <br />- Protected Extensible Authentication Protocol<br />   → Protected EAP<br />- Created by Cisco, Microsoft and RSA Security<br />- Encapsulates EAP in a TLS tunnel, one certificate on the server<br />   → combined a secure channel and EAP<br />- Commonly implemented as PEAPv0/EAP-MSCHAPv2<br />   → Authenticates to Microsoft's MS-CHAPv2 databases<br /><br />Wireless security models<br />- configure the authentication on your wireless access point / wireless router<br />- open system<br />   → no authentication password is required<br />- WPA2-Personal/WPA2-PSK<br />   → WPA2 with a pre-shared key<br />   → everyone uses the same 256-bit key<br />- WPA2-Enterprise/WPA2-802.1X<br />   → authenticates users individually with an authentication server (i.e., RADIUS)<br /><br />MAC filtering<br />- Media Acces Control<br />   → the “hardware” address<br />- limit access through hardware address<br />   → keeps the neighbours out<br />   → additional administration with visitors<br />- easy to find working MAC addresses through packet captures<br />   → MAC addresses can be spoofed<br />   → Free open-source software<br />- Security through obscurity<br />   → not actual security<br /><br />Geofencing<br />- some MDM (mobile device managers) allow for geofencing<br />   → restrict or allow features when the device is in a particular area<br />- cameras<br />   → the camera might only work when outside the office<br />- authentication<br />   → only allow logins when the device is located in a particular area<br /><br /><br /><br /><br /><br /></div></body></html>

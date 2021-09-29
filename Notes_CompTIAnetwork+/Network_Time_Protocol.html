@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Network Time Protocol</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Network Time Protocol</h1><br/>Network Time Protocol (NTP)<br />- Switches, routers, firewalls, servers, workstations<br />   → Every device has its own clock<br />- Synchronizing the clocks becomes critical<br />   → Log files, authentication information, outage details<br />- Automatic updates<br />   → No flashing 12:00 lights<br />- Flexible<br />   → You control how clocks are updated<br />- Very accurate<br />   → Accuracy is better than 1 millisecond on a local network<br /><br />NTP clients and servers<br />- NTP server<br />   → Respond to time requests from NTP clients<br />   → Does not modify their own time<br />- NTP client<br />   → Requests time updates from NTP server<br />- NTP client/server<br />   → Requests time updates from an NTP server<br />   → Responds to time requests from other NTP clients<br />- Important to plan your NTP strategy<br />   → Which devices are clients, servers, and client/servers?<br /><br />NTP stratum layers<br />- Some clocks are better than others<br />   → Your distance from the original reference clock is a stratum<br />- Stratum 0<br />   → Atomic clock, GPS clock<br />   → Very accurate<br />- Stratum 1<br />   → Synchronized to stratum 0 servers<br />   → Primary time servers<br />- Stratum 2<br />   → Sync'd to stratum 1 servers<br /><br />Configuring NTP<br />- NTP client<br />   → Specify the NTP server address (IP or hostname)<br />   → Use multiple NTP servers (if available) for redundancy<br />- NTP server<br />   → You need at least one clock source<br />   → Specify the stratum level of the clock<br />   → If there's a choice, the lower stratum level wins<br /><br /><br /><br /></div></body></html>

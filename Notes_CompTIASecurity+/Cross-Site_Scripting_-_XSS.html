@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Cross-Site Scripting - XSS</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Cross-Site Scripting - XSS</h1><br/>Cross-Site scripting<br />- XSS<br />   → Cascading Style Sheets (CSS) are something entirely different<br />- Originally called cross-site because of browser security flaws<br />   → information from one site could be shared with another<br />- one of the most common web application development errors<br />   → takes advantage of the trust a user has for a site<br />   → complex and varied<br />- malware that uses JavaScript<br /><br />Non-persistent (reflected) XSS attack<br />- Web site allows scripts to run in user input<br />   → search box is a common source<br />- bad guy emails a link that takes advantage of this vulnerability<br />   → runs a script that sends credentials/session IDs/cookies to the bad guy<br />- script embedded in URL executes in the victim's browser<br />   → as if it came from the server<br />- bad guys use credentials/session IDs/ cookies to steal the victim's information without their knowledge<br />   → very sneaky<br /><br />Persistent (stored) XSS attack<br />- bad guy posts a message to a social network<br />   → includes the malicious payload<br />- it's now “persistent”<br />   → everyone gets the payload<br />- no specific target<br />   → all viewers to the page<br />- for social networking, this can spread quickly<br />   → everyone who views the message can have it posted to their page<br />      ⇒ where this propagates...<br /><br />Hacking a Subaru<br />- June 2017, Aaron Guzman<br />   → Security researcher<br />- When authenticating with Subaru, users get a token<br />   → this token never expires (bad!)<br />- a valid token allowed any service request<br />   → even adding your email address to someone else's account<br />   → now you have full access to someone else's car<br />- Web front-end included an XSS vulnerability<br />   → a user clicks a malicious link, and you have their token<br /><br />Protecting against XSS<br />- be careful when clicking untrusted links<br />   → never blindly click in your email inbox <br />- Consider disabling JavaScript<br />   → or control with an extension<br />   → this offers limited protection<br />- Keep your browser and applications updated<br />   → avoid browser vulnerabilities<br />- validate input<br />   → don't allow users to add their own scripts to an input field<br /><br /></div></body></html>

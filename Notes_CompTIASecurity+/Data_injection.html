@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Data injection</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Data injection</h1><br/>Code injection<br />- code injection<br />   → adding your own information into a data stream<br />- enabled because of bad programming<br />   → the application should properly handle input and output<br />- so many different data types<br />   → HTML, SQL, XML, LDAP, etc.<br /><br />SQL injection<br />- SQL - Structured Query Language<br />   → the most common relational database management system language<br />- SQL injection<br />   → modifying SQL requests<br />   → your application shouldn't really allow this<br /><br />XML injection and LDAP injection<br />- XML - Extensible Markup Language<br />   → A set of rules for data transfer and storage<br />- XML injection<br />   → modifying XML requests - a good application will validate<br />- LDAP - Lightweight Directory Access Protocol<br />   → created by the telephone companies<br />   → now used almost by everyone<br />- LDAP injection<br />   → Modify LDAP requests to manipulate application results<br /><br /></div></body></html>

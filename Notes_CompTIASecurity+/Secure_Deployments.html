@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Secure Deployments</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Secure Deployments</h1><br/>Development to production<br />- your programming team has been working on a new application<br />   → how will you deploy it safely and reliably?<br />- patch Tuesday<br />   → test and deploy Wednesday? Thursday? ...<br />- manage the process<br />   → safely move from a non-production phase to full production<br /><br /><br />Sandboxing<br />- isolated testing environment<br />   → no connection to the real world or production system<br />   → a technological safe space<br />- use during the development process<br />   → try some code, break some code, nobody gets hurt<br />- incremental development<br />   → helps build the application<br /><br />Working environments<br />- development<br />   → secure environment<br />   → writing code<br />   → developers test in their sandboxes<br />- test<br />   → still in the development stage<br />   → all of the pieces are put together<br />   → does it all work?<br />   → functional tests, quality assurance (QA) testing<br />   → if it works in test, then it's ready for staging<br />- staging<br />   → almost ready to roll out<br />   → works and feels exactly like the production environment<br />   → working with a copy of production data<br />   → run performance test <br />   → test usability and features<br />- production<br />   → application is live<br />   → rolled out to user community<br /><br />Secure baselines<br />- the security of an application environment should be well defined<br />   → all application instances must follow the baseline<br />   → firewall settings, patch levels, OS file versions<br />   → may require constant updates<br />- ingegrity measurements check for the secure baseline<br />   → these should be performed often<br />   → check against well-documented baselines<br />   → failure requires an immediate correction<br /><br /></div></body></html>

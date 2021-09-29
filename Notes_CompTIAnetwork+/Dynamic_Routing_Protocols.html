@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Dynamic Routing Protocols</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Dynamic Routing Protocols</h1><br/>Dynamic Routing Protocols<br />- listen for subnet information from other routers<br />   → sent from router to router<br />- Provide subnet information to other routers<br />   → tell other routers what you know<br />- Determine the best path based on the gathered information<br />   → every routing protocol has its own way of doing this<br />- when network changes occur, update the available routes<br />   → different convergence process for every dynamic routing protocol<br /><br />Which routing protocol to use?<br />- What exactly is a route?<br />   → isi it based on the state of the link?<br />   → it is based on how far away it is?<br />- how does the protocol determine the best path?<br />   → some formula is applied to the criteria to create a metric<br />   → rank the routes from best to worst<br />- Recover after a change to the network<br />   → convergence time  can vary widely between routing protocols<br />- Standard or proprietary protocol?<br />   → OSPF and RIP are standards, some functions of EIGRP are CISCO proprietary<br /><br />Distance-vector routing protocols<br />- Information passed between routers contains routing tables<br />   → how many “hops” away is another network?<br />   → the deciding “vector” is the “distance”<br />- usually automatic<br />   → very little configuration<br />- good for smaller networks<br />   → Doesn't scale very well to very large networks<br />- Examples: RIP, RIPv2, EIGRP<br /><br />Link-state routing protocols<br />- information passed between routers is related to the current connectivity<br />   → it it's up, you can get there<br />   → if it's down, you can't<br />- Consider the speed of the link<br />   → faster is always better, right?<br />- Very scalable<br />   → used most often in large networks<br />- Ex OSPF<br />   → large, scalable routing protocol<br /><br />Hybrid routing protocols<br />- A little link-state, a little distance-vector<br />   → Not many examples of a hybrid routing protocol<br />- BGP (Border Gateway Protocol)<br />   → determines route based on paths, network policies, or configured rule-sets</div></body></html>

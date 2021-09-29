@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Virtualization Security</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Virtualization Security</h1><br/>VM sprawl avoidance<br />- click a button<br />   → you've built a server<br />   → or multiple servers, networks, and firewalls<br />- it becomes almost too easy to build instances<br />   → provision, provision, provision<br />   → this can get out of hand very quickly<br />- the virtual machines are sprawled everywhere<br />   → you aren't sure which VMs are related to which applications<br />   → it becomes extremely difficult to deprovision<br />- formal process and detailed documentation<br />   → you should have information on every virtual object<br /><br />VM escape protection<br />- the VM is self-contained<br />   → there's no way out<br />   → or is there?<br />- VM escape<br />   → break out of the VM and interact with the host OS or hardware<br />- once you escape the VM, you have great control<br />   → control the host and control other guest VMs<br />- this would be a huge exploit<br />   → full control of the virtual world<br /><br />Escaping the VM<br />- March 2017 - Pwn2Own competition<br />   → hacking contest<br />   → you pwn it, you own it - along with some cash<br />- JavaScript engine bug in Microsoft Edge<br />   → code execution in Edge sandbox<br />- Windows 10 kernel bug<br />   → compromise the guest OS<br />- hardware simulation bug in VMware<br />   → escape to the host<br />- patches were released soon afterwards<br /><br /><br /><br /></div></body></html>

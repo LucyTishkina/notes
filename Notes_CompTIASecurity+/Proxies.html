@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Proxies</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Proxies</h1><br/>Proxies<br />- sits between the users and the external network<br />- receives the user requests and sends the request on their behalf (the proxy)<br />- useful for caching information, access control, URL filtering, content scanning<br />- applications may need to know how to use the proxy (explicit)<br />- some proxies are invisible (transparent)<br /><br />Application Proxies<br />- one of the simplest “proxies” is NAT<br />   → a network-level proxy<br />- most proxies in use are application proxies<br />   → the proxy understands the way application works<br />- a proxy may only know one application<br />   → HTTP<br />- many proxies are multipurpose proxies<br />   → HTTP, HTTPS, FTP, etc.<br /><br />Forward proxy<br />- an “internal proxy”<br />   → commonly used to protect and control user access to the Internet<br /><br />User -------------------- Proxy -------------- Internet<br />|----Internal Network------|<br /><br />Reverse proxy<br />- inbound traffic from the Internet to your internal device<br /><br />Internet --------------- Proxy -------------- Web Server<br />                             | -------- Internal network------|<br />                             <br />Open proxy<br />- a third-party, uncontrolled proxy<br />   → can be a significant security concern<br />   → often used to circumvent existing security controls (like URL filters)<br />   → can modify traffic and malicious code<br /><br />Internet --------------------- Proxy --------------------- Internet<br /><br /><br /></div></body></html>

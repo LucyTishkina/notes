@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Privilege Escalation</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Privilege Escalation</h1><br/>Privilege escalation<br />- gain higher-level access to a system<br />   → exploit a vulnerability<br />   → might be a bug or design flaw<br />- higher-level access means more capabilities<br />   → this commonly is the highest-level access<br />   → this is obviously a concern<br />- these are high-priority vulnerability patches<br />   → you want to get these holes closed very quickly<br />   → any user can be an administrator<br />- horizontal privilege escalation<br />   → use A can access user B resources<br /><br />Mitigating privilege escalation<br />- patch quickly<br />   → fix the vulnerability<br />- update anti-virus/anti-malware software<br />   → block known vulnerabilities<br />- Data Execution Prevention<br />   → only data in executable areas can run<br />- Address space layout randomization<br />   → prevent a buffer overrun at a known memory address<br /><br /><br /></div></body></html>

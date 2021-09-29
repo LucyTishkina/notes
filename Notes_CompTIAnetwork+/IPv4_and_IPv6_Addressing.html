@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>IPv4 and IPv6 Addressing</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">IPv4 and IPv6 Addressing</h1><br/>The IP address of a device<br />- IP address e.g, 192.168.1.165<br />   → every device needs a unique IP address<br />- Subnet mask, e.g. 255.255.255.0<br />   → used by the local workstation to determine what subnet it's on<br />      ⇒ the subnet mask isn't (usually) transmitted across the network<br />      ⇒ you'll ask for the subnet mask all the time<br /><br /><br />The secret behind the IP address<br />- The IP address isn't really a single address<br />- An IP address is a combination of a network ID and a host ID<br />   → the subnet mask determines what part of the IP address is the network and which part is the host<br />   → the subnet mask is just as important as your IP address!<br />- The best way to see this work is in binary<br />   → this is the (very easy) math part<br /><br />IPv4 address<br />- Internet Protocol version 4<br />   → OSI Layer 3 address<br />   → 192 | 168 | 1 | 131<br />   → 11000000 | 10101000 | 00000001 | 10000011<br />   → 8 bits = 1 byte = 1 octet<br />- Since one byte is 8 bits, the maximum decimal value for each byte is 255<br /><br />IPv6 address<br />- Internet Protocol v6 - 128-bit address<br />- 340,282,366,920,938,463,463,374,607,431,768,211,456 addresses (340 undecillion)<br />- 6.8 billion people could have 5e27 addresses each<br />- fe80::5d18:652:cffd:8f52<br />- 16 bits = 2 bytes = 2 octets<br />- your DNS will become very important!<br /><br />IPv6 address compression<br />- Groups of zeros can be abbreviated with a double colon<br />   → only one of these abbreviations allowed per address<br />- Leading zeros are optional<br />Example 1<br />2600:DDDD:1111:0001:0000:0000:0000:0001<br />- Removing leading zeros<br />2600:DDDD:1111:1:0:0:0:1<br />- Abbreviate 2+ groups of zeros with double colons:<br />   → 2600:DDDD:1111:1::1<br /><br />Example 2<br />2601:4C3:4002:BE00:0000:0000:0000:0066<br />- Removing leading zeros<br />2601:4C3:4002:BE00:0:0:0:66<br />- Abbreviate 2+ groups of zeros with double colons:<br />2601:4C3:4002:BE00::66<br /></div></body></html>

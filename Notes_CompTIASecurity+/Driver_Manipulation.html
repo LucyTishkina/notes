@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Driver Manipulation</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Driver Manipulation</h1><br/>Malware hide-and-go-seek<br />- traditional anti-virus is very good at identifying known attacks<br />   → checks the signature<br />   → block anything that matches<br />- there are still ways to infect and hide<br />   → it's a constant war<br />   → zero-day attacks, new attack types, etc.<br /><br />Your drivers are powerful<br />- The interaction between the hardware and your operating system<br />   → they are often used<br />   → great opportunity for security issues<br />- May 2016 - HP Audio Drivers<br />   → Conexant audio chips<br />   → Driver installation includes audio control software<br />   → Debugging feature enables a keylogger<br />- Hardware interactions contain sensitive information<br />   → video, keyboard, mouse<br /><br />Shimming<br />- filling in the space between two objects<br />   → a middleman<br />- Windows includes it's own shim<br />   → backwards compatibility with previous Windows versions<br />   → Application Compatibility Shim Cache<br />- Malware authors write their own shims<br />   → Get around security (like UAC)<br />- January 2015 Microsoft vulnerability<br />   → Elevates privilige<br /><br />Refactoring<br />- metamorphic malware<br />   → a different program each time it's downloaded<br />- make it appear different each time<br />   → add NOP instructions<br />   → Loops, pointless code strings<br />- can intelligently redesign itself<br />   → reorder functions<br />   → modify the application flow<br />   → reorder code and insert unused data types<br />- Difficult to match with signature-based detection<br />   → use a layered approach</div></body></html>

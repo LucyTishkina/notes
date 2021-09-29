@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Symmetric and Asymmetric Encryption</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Symmetric and Asymmetric Encryption</h1><br/>Symmetric encryption<br />- a single, shared key<br />   → encrypt with the key<br />   → decrypt with the key<br />   → if it gets out, you'll need another key<br />- secret key algorithm<br />   →  a shared secret<br />- doesn't scale very well<br />   → can be challenging to distribute<br />- very fast to use<br />   → less overhead than asymmetric encryption<br />   → often combined with asymmetric encryption<br /><br />Asymmetric encryption<br />- public key cryptography<br />   → two (or more) mathematically related keys<br />- private key<br />   → keep this private<br />- public key<br />   → anyone can see this key<br />   → give it away<br />- the private key is the only key that can decrypt data encrypted with the public key<br />   → you can't derive the private key from the public key<br /><br />The key pair<br />- asymmetric encryption<br />   → Public Key Cryptography<br />- Key generation<br />   → build both the public and private key at the same time<br />   → lots of randomization<br />   → large prime numbers<br />   → lots and lots of math<br />- everyone can have the public key<br />   → only Alice has the private key<br /><br />Key Generation: Large Random Number -→ Key Generation Program → Public Key and Private Key<br /><br />Asymmetric encryption<br /><br />plaintext + public key = ciphertext                        ciphertext + private key = plaintext<br />Bob's laptop ------------------------------------------------------→ Alice's computer<br /><br /><br />Symmetric key from asymmetric key<br />- use public and private key cryptography to create a symmetric key<br />   → math is powerful<br /><br />Bob's end<br />Bob's private key + Alice's public key = symmetric key<br /><br />Alice's end<br />Alice's private key + Bob's public key = symmetric key<br /><br />Elliptic curve cryptography (ECC)<br />- asymmetric encryption<br />   → need large integers composed of two or more large prime factors<br />- instead of numbers use curves<br />   → uses smaller keys than non-ECC asymmetric encryption<br />   → smaller storage and transmission requirements<br />   → perfect for mobile devices<br /><br /></div></body></html>

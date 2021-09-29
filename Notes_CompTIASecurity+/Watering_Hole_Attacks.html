@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Watering Hole Attacks</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Watering Hole Attacks</h1><br/>Watering hole attack<br />- what if your network was really secure?<br />- the bad guys can't get in<br />   → not responding to phishing emails<br />   → not opening any email attachments<br />- have the mountain come to you<br />   → go where the mountain hangs out<br />   → the watering hole<br />   → this requires a bit of research<br /><br />Executing the watering hole attack<br />- Determine which website the victim group uses<br />   → educated guess - local coffee or sandwich shop<br />   → industry-related sites<br />- infect one of these third-party sites<br />   → site vulnerability<br />   → email attachments<br />- infect all visitors<br />   → but you're just looking for specific victims<br />   → now you're in<br /><br />Because that's where the money is<br />- January 2017<br />- Polish Financial Supervision Authority, National Banking and Stock Commission of Mexico, State-owned bank in Uruguay<br />   → the watering hole was sufficiently poisoned<br />- visiting the site would download malicious JavaScript files<br />   → but only to IP addresses matching banks and other financial institutions<br />- Did that attack work?<br />   → we still don't know<br /><br />Watching the watering hole<br />- defense-in-depth<br />   → layered defense<br />   → it's never one thing<br />- firewall and IPS<br />   → stop the network traffic before things get bad<br />- Anti-virus / Anti-malware signature updates<br />   → the Polish Financial Supervision Authority attack code was recognized and stopped by generic signatures in Symantec's anti-virus software</div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Resiliency and Automation</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Resiliency and Automation</h1><br/>Automation and scripting<br />- plan for change<br />   → implement automatically<br />- automated courses of action<br />   → many problems can be predicted<br />   → have a set of automated responses<br />- continuous monitoring<br />   → check for a particular event, and then react<br />- configuration validation<br />   → cloud-based technologies allow for constant change<br />   → automatically validate a configuration before going live<br />   → perform ongoing automated checks<br /><br />Templates<br />- cloud orchestration relies on templates<br />   → defined the basic structure of an application instance<br />   → the blueprint of your online services<br />- application instance requires a web server and a database server<br />   → web server needs a specific Apache HTTP server version, a specific PHP version, the corporate SSL certs, firewall with predefined rules, brute force monitoring, etc.<br />- the template is just the start<br />   → each application instance needs to be customized<br />   → orchestrate with scripts and APIs<br /><br />Master image<br />- instead of building the server each time ,create a customized image<br />   → build the perfect deployment<br />   → save it as a master image<br />- you'll still need to make changes when deploying<br />   → IP addresses, firewall rules, licensing updates<br />- you'll have to keep the master image updated<br />   → security patches, OS updates, service updates<br />   → this can be administratively challenging<br />   → this can also save a lot of time<br /><br />Non-persistence<br />- the cloud is always in motion<br />   → application instances are constantly built and torn down<br />- snapshots can capture the current configuration and data<br />   → preserve the complete state of a device, or just the configuration<br />- revert to a known state<br />   → fall back to a previous snapshot<br />- rollback to known configuration<br />   → don't modify the data, but use a previous configuration<br />- live boot media<br />   → run the OS from removable media - very portable!<br /><br />Elasticity and scalability<br />- elasticity<br />   → provide resources when demand requires it<br />   → scale down when things are slow<br />- host availability<br />   → new server deployed with a few mouse clicks<br />- virtualization integrates a layer of orchestration<br />   → automate the deployment and movement of virtual hosts<br />- servers can be added or moved to other data centers<br />   → all of the management systems follow the servers<br /></div></body></html>

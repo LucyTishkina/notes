@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Network Segmentation</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Network Segmentation</h1><br/>Segmenting the network<br />- physical, logical, or virtual segmentation<br />   → Devices, VLANs, virtual networks<br />- Performance<br />   → high-bandwidth application<br />- Security<br />   → users should not talk directly to database servers<br />   → the only applications in the core are SQL and SSH<br />- Compliance<br />   → mandated segmentation (PCI compliance)<br />   → makes change control much easier<br /><br />Physical segmentation<br />- devices are physically separate<br />   → Switch A and Switch B<br />- must be connected to provide communication<br />   → direct connect, or another switch or router<br />- Web server in one rack<br />   → Database servers on another<br />- Application A servers in one rack<br />   → Application B servers on another<br />- Customer A on one switch, customer B on another<br />   → no opportunity of mixing data<br />- Separate devices<br />   → multiple units, separate infrastructure<br /><br />Logical segmentation with VLANs<br />- Virtual Local Area Networks (VLANs)<br />   → Separated logically instead of physically<br />   → cannot communicate between VLANs without Layer 3 device / router (or setup a firewall to allow for communication)<br /><br />Virtualization<br />- get rid of physical devices<br />   → all devices become virtualized<br />- servers, switches, routers, firewalls, load balancers<br />   → all virtual devices<br />- instant and complete control<br />   → build a new network<br />   → route between IP subnets<br />   → drop a firewall between<br />   → drag and drop devices between networks<br /><br />Air gaps<br />- one step farther than physical segmentation<br />   → physical segmentation usually has some connectivity<br />- remove any connectivity between components<br />   → no possible way for one device to communicate to another<br />   → no shared components<br />- network separation<br />   → secure networks<br />   → industrial systems (SCADA, manufacturing)<br />- some technologies can jump the gap<br />   → removable media<br /><br /></div></body></html>

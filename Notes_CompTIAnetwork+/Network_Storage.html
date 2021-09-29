@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Network Storage</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Network Storage</h1><br/>NAS vs. SAN<br />- Network Attached Storage (NAS)<br />   → connect to a shared storage device across the network<br />   → file-level access<br />- Storage Area Network (SAN)<br />   → looks and feels like a local storage device<br />      ⇒ block-level access<br />   → very efficient reading and writing<br />- Requires a lot of bandwidth<br />   → may use an isolated network and high-speed network technologies<br /><br />Jumbo frames<br />- Ethernet frames with more than 1500 bytes of payload<br />   → up to 9216 bytes (9000 is the accepted norm)<br />- Increases transfer efficiency<br />   → per-packet size<br />   → fewer packets to switch/route<br />- Ethernet devices must support jumbo frames<br />   → switches, interface cards<br />   → not all devices are compatible with others<br /><br />Fibre Channel (FC)<br />- a specialized high-speed topology <br />   → connect servers to storage<br />   → 2-,4-,8- and 16-gigabit per second rates<br />   → supported over both fiber and copper<br />- servers and storage connect to a Fibre Channel switch<br />   → server (initiator) needs a FC inerface<br />   → Storage (target) is commonly referenced by SCSI, SAS, or SATA commands<br /><br />Fibre Channel over the data network<br />- Fibre Channel over Ethernet (FCoE)<br />   → use Fibre Channel over an Ethernet network<br />      ⇒ no special networking hardware needed<br />   → usually integrates with an existing Fibre Channel infrastructure<br />      ⇒ not routable<br />- Fibre Channel over IP (FCIP)<br />   → encapsulates Fibre Channel data into IP packets<br />      ⇒ Fibre Channel tunnelling<br />   → Geographically separate the servers from the storage<br /><br />iSCSI<br />- Internet Small Computer Systems Interface<br />   → Send SCSI commands over an IP network<br />   → Created by IBM and Cisco, now an RFC standard<br />- Makes a remote disk look and operate like a local disk<br />   → Like Fibre Channel<br />- Can be managed quiet well in software<br />   → drivers available for many operating systems<br />   → no proprietary topologies or hardware needed<br /><br />InfiniBand<br />- high-speed switching topology<br />   → alternative to Fibre Channel<br />- copper and fibre options<br />   → QSFP connectors<br />- Popular use in research and supercomputers<br />   → Designed for high speeds and low latency<br />   → 100 Gbit/s and 200 Gbit/s are common<br />   → links can be aggregated for higher throughput (4x, 8x, 12x links)<br /><br /></div></body></html>

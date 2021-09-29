@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>PAP, CHAP, and MS-CHAP</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">PAP, CHAP, and MS-CHAP</h1><br/>PPP authentication<br />- Point-to-Point Protocol<br />   → analog dialup, ISDN<br />- And derivatives<br />   → PPTP (Point-to-Point Tunnelling Protocol)<br />   → PPPoE (Point-to-Point Protocol over Ethernet) - DSL authentication<br />- Need to authenticate through these non-Ethernet networks<br />   → PAP, CHAP, and MS-CHAP<br /><br />PAP (Password Authentication Protocol)<br />- a basic authentication method<br />   → used in legacy OS's<br />   → rare to see singularly used<br />- PAP is in the clear<br />   → weak authentication scheme<br />   → non-encrypted password exchange<br />   → we didn't require encryption on analog dialup lines<br /><br />CHAP<br />- Challenge-Handshake Authentication Protocol<br />   → encrypted challenge sent over the network<br />- three-way handshake<br />   → after link is established, server sends a challenge message<br />   → client responds with a password hash calculated from the challenge and the password<br />   → server compares received hash with stored hash<br />- challenge-response continues<br />   → occurs periodically during the connection<br />   → user never knows what happens<br /><br />MS-CHAP<br />- Microsoft's implementation of CHAP<br />   → used commonly on Microsoft's Point-to-Point Tunnelling Protocol (PPTP) MS-CHAP v2 is the more recent version<br />- security issues related to the use of DES<br />   → relatively easy to brute force the 2^56 possible keys to decrypt the NTLM hash<br />   → DON'T USE MS-CHAP!!!<br />   → Consider L2TP, IPsec, or some other secure VPN technology<br /><br /></div></body></html>

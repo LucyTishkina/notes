@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Virtual Networking</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Virtual Networking</h1><br/>Network virtualization<br />- server farm with 100 individual computers<br />   → it's a big farm<br />- all servers are connected with enterprise switches and routers<br />   → with redundancy<br />- migrate 100 physical servers to one physical server<br />   → with 100 virtual servers inside<br />- what happens to the network?<br /><br />The hypervisor<br />- Virtual Machine Manager<br />   → manages the virtual platform and guest operating systems<br />- may require a CPU that supports virtualization<br />   → can improve performance<br />- Hardware management<br />   → CPU<br />   → Networking<br />   → Security<br /><br />Network requirements<br />- most client-side virtual machine managers have their own virtual (internal) networks<br />- shared network address<br />   → the virtual machine shares the same IP address as the physical host<br />   → uses a private IP address internally<br />   → Uses NAT to convert to the physical host IP<br />- Bridged network address<br />   → the VM is a device on the physical network<br />- private address<br />   → the VM does not communicate<br /><br />Virtualization<br />- can have virtual switches, routers, firewalls<br />- switches and routers are software-based<br />- easy to add or change components<br />- flexible - can build the system to meet the specifications and requirements exactly<br /><br /></div></body></html>

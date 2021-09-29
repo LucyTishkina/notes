@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Account Policy Enforcement</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Account Policy Enforcement</h1><br/>Credential management<br />- all that stands between the outside world and all of the data<br />   → the data is everything<br />- passwords must not be embedded in the application<br />   → everything needs to reside on the server, not the client<br />- communication across the network should be encrypted<br />   → authentication traffic should be impossible to see<br /><br />Configuration settings<br />- Windows Group Policy Management<br />   → apply security and admin settings across many computers<br />   → thousands of settings<br />- different than NTFS or Share permissions<br />   → control the use of the OS<br />- linked to Active Directory administrative boundaries<br />   → sites, domains, organization units (OUs)<br />   → define by groups, locations, etc.<br /><br />Group Policy control<br />- administrative policies<br />   → remove ‘Add or Remove Programs’<br />   → prohibit changing sounds<br />   → allow font downloads<br />   → only allow approved domains to use ActiveX controls without prompt<br />- Security policies<br />   → specify minimum password length<br />   → require smart card<br />   → maximum security log size<br />   → enforce user login restrictions<br /><br />Password complexity and length<br />- make your password strong<br />   → no single words<br />   → no obvious passwords<br />      ⇒ what's the name of your dog?<br />   → mix upper and lower case<br />   → use special characters<br />      ⇒ don't replace a o with 0, t with a 7<br />- a strong password is at least 8 characters<br />   → consider a phrase or set of words<br />- prevent password reuse<br />   → system remembers password history, requires unique passwords<br /><br />Password expiration and recovery<br />- all passwords should expire<br />   → change every 30 days, 60 days, etc.<br />- critical systems might change more frequently<br />   → every 15 days or every week<br />- the recovery process should not be trivial!<br />   → some organizations have a very formal process<br /><br />Account lockout and disablement<br />- too many bad passwords will cause a lockout<br />   → this should be normal for most users<br />   → this can cause big issues for service accounts<br />      ⇒ you might want this<br />- disable accounts<br />   → part of the normal change process<br />   → you don't want to delete account<br />      ⇒ at least not initially</div></body></html>

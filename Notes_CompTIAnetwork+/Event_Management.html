@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Event Management</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Event Management</h1><br/>Interface monitoring<br />- Up or down<br />   → the most important statistic<br />   → no special rights or permissions required<br />   → green is good, red is bad<br />- alarming and alerting<br />   → notification should an interface fail to report<br />   → Email, SMS<br />- Short-term and long-term reporting<br />   → view availability over time<br />- not focused on additional details<br />   → additional monitoring may require SNMP (simple network management protocol)<br /><br />SIEM<br />- Security Information and Event Management<br />   → logging of security events and information<br />- security alerts<br />   → real-time information<br />- log aggregation and long-term storage<br />   → usually includes advanced reporting features<br />- data correlation<br />   → linked diverse data types<br />- forensic analysis<br />   → gather details after an event<br /><br />Syslog<br />- standard for message logging<br />   → diverse systems, consolidated log<br />- usually a central logging receiver <br />   → integrated into the SIEM<br />- you're going to need a lot of disk space<br />   → no, more<br />   → more than that<br /><br />SIEM logs<br />- processes information, logging info, etc<br /><br />SIEM dashboard<br />- broad view in visual format<br /><br />SNMP <br />- Simple Network Management Protocol<br />   → a database of data (MIB) - Management Information Base<br />- SNMP versions<br />   → v1 - the original<br />      ⇒ structured tables, in-the-clear<br />   → v2 - a good step ahead<br />      ⇒ data type enhancements, bulk transfers, still in-the-clear<br />   → v3 - the new standard<br />      ⇒ message integrity, authentication, encryption<br />- SNMP information can be very detailed<br />   → access should be very limited<br /><br />Graphing with SNMP<br />- uptime, availability, speed, access, etc.<br /><br />MIB browsers<br />- available for many OS's<br />- gathers information<br /><br /><br /><br /></div></body></html>

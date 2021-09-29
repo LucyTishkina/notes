@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Key Stretching Algorithms</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Key Stretching Algorithms</h1><br/>Give weak keys a workout<br />- a weak key is a weak key<br />   → by itself, it's not very secure<br />- make a weak key stronger by performing multiple processes<br />   → hash a password, hash the hash of the password, ...<br />   → key stretching, key strengthening<br />- brute force attacks would require reversing each of those hashes<br />   → the attacker has to spend much more time, even though the key is small<br /><br />Key stretching libraries<br />- already built for your application<br />   → no additional programming involved<br />- bcrypt<br />   → generates hashes from passwords<br />   → an extension to the UNIX crypt library<br />   → uses Blowfish cipher to perform multiple rounds of hashing<br />- Password-Based Key Derivation Function 2 (PBKDF2)<br />   → part of RSA public key cryptography standards (PKCS #5, RFC 2898)<br /><br /></div></body></html>

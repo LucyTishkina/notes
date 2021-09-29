@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>DNS Poisoning and Domain Hijacking</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">DNS Poisoning and Domain Hijacking</h1><br/>DNS poisoning<br />- Modify the DNS server<br />   → requires some crafty hacking<br />- modify the client host file<br />   → the host file take precedent over DNS quieries<br />- send a fake response to a valid DNS request<br />   → requires a redirection of the original request or the resulting response<br /><br />DNS spoofing/poisoning<br /><br /><br />User 1 ---------------------------------------------------------------- --------------------------------------DNS Server<br />professormesser.com = 162.159.246.164            |                        professormesser.com = 162.159.246.164<br />                                                                           |<br />                              Bad guy professormesser.com = 100.100.100.100<br /><br />                              <br />User 2 ---------------------------------------------------------------- --------------------------------------DNS Server<br />professormesser.com = 100.100.100.100            |                        professormesser.com = 100.100.100.100<br />                                                                           |<br />                              Bad guy professormesser.com = 100.100.100.100<br />                              <br />Domain hijacking<br />- Get access to the domain registration, and you have control where the traffic flows<br />   → you don't need to touch the actual servers<br />   → determines the DNS names and DNS IP addresses<br />- Many ways to get into the account<br />   → brute force<br />   → social engineering the password<br />   → gain access to the email address that manages the account<br />   → the usual things<br />- Example: Saturday October 22, 2016, 1PM<br />- Domain name registrations of 36 domains are changed<br />   → Brazilian bank<br />   → Desktop domains, mobile domains, and more<br />- Under hacker control for 6 hours<br />   → the bad guys became the bank<br />- 5 million customers, $27 billion in assets<br />   → results of the hack have not been publicly released<br /><br /></div></body></html>

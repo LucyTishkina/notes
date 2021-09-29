@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Load Balancers</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Load Balancers</h1><br/>Balancing the load<br />- Distribute the load<br />   → multiple servers<br />   → invisible to the end-user<br />- large-scale implementations<br />   → web server farms, database farms<br />- fault tolerance<br />   → server outages have no effect<br />   → very fast convergence<br /><br />Load balancer<br />- configurable load<br />   → manage across servers<br />- TCP offload<br />   → Protocol overhead (TCP handshake)<br />- SSL offload<br />   → encryption/decryption<br />- Caching<br />   → fast response<br />- Prioritizing<br />   → QoS<br />- Content switching<br />   → application-centric balancing<br /><br />        the internet<br />                |<br />        load balancer<br />        /       |       \                <br /> Server A ...      Server D<br /> <br />Scheduling<br />- Round-robin<br />   → each server is selected in turn<br />- additional round-robin options<br />   → weighted round-robin<br />      ⇒ prioritize the server use<br />   → dynamic round-robin<br />      ⇒ monitor the server load and distribute to the server with the lowest use<br />- active/active load balancing<br /><br />- Affinity<br />   → a kinship, a likeness<br />- many applications require communication to the same instance<br />   → each user is “stuck” to the same server<br />   → tracked through IP address or session IDs<br />   → source affinity<br />- Active/active load balancing<br /><br />Active/passive load balancing<br />- some servers are active<br />   → others are on standby<br />- if an active server fails, the passive server takes its place<br /><br /><br /></div></body></html>

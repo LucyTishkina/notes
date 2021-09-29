@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Perfect Forward Secrecy</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Perfect Forward Secrecy</h1><br/>Traditional web server encryption<br />- SSL/TLS uses encryption keys to protect web server communication<br />   → traditionally, this has been based on the web server's RSA key pair<br />   → one key that encrypts all symmetric keys<br />- this server's private key can rebuild everything<br />   → if you capture all of the traffic, you can decrypt all of the data<br />- once point of failure for all of your web site encryption<br /><br />Perfect Forward Secrecy (PFS)<br />- change the method of key exchange<br />   → don't use the server's private RSA key<br />- elliptic curve or Diffie-Hellman ephemeral<br />   → the session keys aren't kept around<br />- can't decrypt with the private server key<br />   → every session uses a different private key for the exchange<br />- PFS requires more computing power<br />   → not all servers choose to use PFS<br />- the browser must support PFS<br />   → check your SSL/TLS information for details<br /><br /></div></body></html>

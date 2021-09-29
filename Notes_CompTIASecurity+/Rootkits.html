@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Rootkits</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Rootkits</h1><br/>Rootkits<br />- originally a Unix technique<br />   → the “root” in rootkit<br />- modifies core system files<br />   → part of the kernel<br />- can be invisible t other operating system<br />   → won't see it in the Task Manager<br />- also invisible to traditional anti-virus utilities<br />   → it you can't see it, you can't stop it<br /><br />Kernel drivers<br />- Zeus/Zbot malware<br />   → famous for cleaning out bank accounts<br />- now combined with Necurs rootkit<br />   → Necurs is a kernel-level driver<br />- Necurs makes sure you can't delete Zbot<br />   → Access denied<br />- trying to stop the Windows process?<br />   → error terminating process: Access denied<br /><br />Finding and removing rootkits<br />- Look for the unusual<br />   → anti-malware scans<br />- user a remover specific to the rootkit<br />   → usually built after the rootkit is discovered<br />- secure boot with UEFI<br />   → security in the BIOS<br /><br /></div></body></html>

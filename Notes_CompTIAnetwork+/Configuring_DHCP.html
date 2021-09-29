@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Configuring DHCP</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Configuring DHCP</h1><br/>Scope properties<br />- IP address range<br />   → And excluded addresses<br />- Subnet mask<br />- Lease durations<br />- Other scope options<br />   → DNS server<br />   → Default gateway<br />   → WINS server<br /><br />DHCP pools<br />- Grouping of IP addresses<br />   → Each subnet has its own scope<br />   → 192.168.1..0/24<br />   → 192.168.2.0/24<br />   → 192.168.3.0/24<br />   → ...<br />- A scope is generally a single contiguous pool of IP addresses<br />   → DHCP exceptions can be made inside of the scope<br /><br />DHCP address allocation<br />- Dynamic allocation<br />   → DHCP server has a big pool of addresses to give out<br />   → Addresses are reclaimed after a lease period<br />- Automatic allocation<br />   → Similar to dynamic allocation<br />   → DHCP server keeps a list of past assignments<br />   → You'll always get the same IP address<br />- Static allocation<br />   → Administratively configured<br />- Table of MAC addresses<br />   → Each MAC address has a matching IP address<br />- Other names<br />   → Static DHCP Assignment<br />   → Static DHCP<br />   → Address Reservation<br />   → IP Reservation<br /><br />DHCP leases<br />- Leasing your address<br />   → It's only temporary<br />   → But it can seem permanent<br />- Allocation<br />   → Assigned a lease time by the DHCP server<br />   → Administratively configured<br />- Reallocation<br />   → Reboout your computer<br />   → Confirms the lease<br />- Workstation can also manually release the IP address <br />   → Moving to another subnet<br /><br />DHCP renewal<br />- T1 timer<br />   → Check in with the lending DHCP server to renew the IP address<br />   → 50% of the lease time (by default)<br />- T2 timer<br />   → If the original DHCP server is down, try rebinding with any DHCP server<br />   → 87.5% of the lease time (7/8ths)\<br /><br />The DHCP lease process<br />Lease Time: 8 days<br />Renewal Timer (T1): 4 days (50%)<br />Rebinding Timer (T2): 7 days (87.5%)<br /><br />After T1 expires - try to renew<br />- If renewal is successful reset timers<br />- If renewal failed wait for T2 to expire<br />   → Try rebinding with new server<br />      ⇒ If renewal is successful reset timers<br />      ⇒ If renewal failed, restart the process</div></body></html>

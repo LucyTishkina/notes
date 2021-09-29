@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Secure Devops</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Secure Devops</h1><br/>DevOps<br />- development and operations<br />   → bring together the two side of the house<br />- create and deploy<br />   → speed, availability, and security<br />- emphasis on automation and monitoring<br />   → integration, testing, release and manage<br />- shrink deployment cycles<br />   → and increase the frequency of deployments<br />- how do you do this safely?<br /><br />Security automation<br />- automation is relatively inexpensive<br />   → it's automated, so run them early and often<br />- functional security tests<br />   → login, logout, ensure a secure platform<br />- test against known vulnerabilities<br />   → misconfigurations, weak SSL ciphers, etc.<br />- penetration testing<br />   → test the OS and application services<br />- test the application<br />   → manipulate the application to get unexpected results<br /><br />Continuous integration<br />- code is constantly written<br />   → and merged into the central repository many times a day<br />- so many chances for security problems<br />   → security should be a concern from the beginning<br />- basic set of security checks during development<br />   → documented security baselines as the bare minimum<br />- large-scale security analysis during the testing phase<br />   → significant problems will have already been covered<br /><br />Immutable systems<br />- update an application every week for a year<br />   → it's nothing like the original deployment<br />   → you couldn't rebuild it if you had to<br />   → configuration drift<br />- immutable systems<br />   → locked down and unable to change<br />- to update an application, a new iteration is deployed<br />   → the entire iteration is up to date and tested<br />- much stronger security posture<br />   → test and validate without worrying about a change<br /><br />inftrastructure as code (IAC)<br />- cloud computing<br />   → relies on automation<br />- if you can automate it, you can quickly and safely deploy it<br />   → except for the server hardware, switches, routers, firewalls, etc.<br />- turn the infrastructure devices into code<br />   → virtualize everything<br />   → focus on what the application needs, rather than building the application based on available infrastructure<br />- a clearly defined infrastructure<br />   → security is a known quantity</div></body></html>

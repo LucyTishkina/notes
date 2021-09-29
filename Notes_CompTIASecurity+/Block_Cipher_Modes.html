@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Block Cipher Modes</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Block Cipher Modes</h1><br/>Block cipher modes of operation<br />- encrypt one fixed-length group of bits at a time<br />   → a block<br />- mode of operation <br />   → defines the method of encryption<br />   → may provide a method of authentication<br />- the block size is a fixed size<br />   → not all data matches the block size perfectly<br />   → split your plaintext into smaller blocks<br />   → some modes require padding before encrypting<br /><br />ECB (Electronic Codebook)<br />- the simplest encryption mode<br />   → too simple for most use cases<br />- each block is encrypted with the same key<br />   → identical plaintext blocks create identical ciphertext blocks<br /><br />CBC (Cipher Block Chaining)<br />- a popular mode of encryption<br />   → relatively easy to implement<br />- each plaintext block is XORed with the previous ciphertext block<br />   → adds additional randomization<br />   → use an initialization vector for the first block<br /><br />CTR (Counter)<br />- block cipher mode / acts like a stream cipher<br />   → encrypts successive values of a “counter”<br />- plaintext can be any size, since it's part of the XOR<br />   → i.e. 8 bits at a time (streaming) instead of 128-bit block<br /><br />GCM (Galois/Counter Mode)<br />- encryption with authentication<br />   → authentication is part of the block mode<br />   → combines Counter Mode with Galois authentication<br />- minimum latency, minimum operation overhead<br />   → very efficient encryption and authentication<br />- commonly used in packetized data<br />   → network traffic security (wireless, IPsec)<br />   → SSH, TLS<br /><br /></div></body></html>

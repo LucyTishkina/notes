@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>IP</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">IP</h1><br/>Analogy<br />- network (ethernet, DSL, cable system) is the road<br />- trucks on the road are the internet protocol<br />- boxes inside trucks are TCP and UDP packets<br />- inside boxes - application information, etc<br /><br /><span style="color:#ff0000;">ethernet header</span> | <span style="color:#90ee90;">ethernet payload</span> | <span style="color:#ff0000;">ethernet trailer</span><br /><span style="color:#ff0000;">ethernet header</span> | <span style="color:#90ee90;">IP</span> | <span style="color:#1e90ff;">IP payload</span> | <span style="color:#ff0000;">ethernet trailer</span><br /><span style="color:#ff0000;">ethernet header</span> | <span style="color:#90ee90;">IP</span> | <span style="color:#1e90ff;">TCP</span> | <span style="color:#ffa500;">TCP payload</span> | <span style="color:#ff0000;">ethernet trailer</span><br /><span style="color:#ff0000;">ethernet header</span> | <span style="color:#90ee90;">IP</span> | <span style="color:#1e90ff;">TCP</span> | <span style="color:#ffa500;">HTTP data</span> | <span style="color:#ff0000;">ethernet trailer</span><br /><br />Every computer has an IP address<br />Each packet has a port number ("ie which room the box belongs to")<br /><br /><br />IPv4 sockets<br />- server IP address, protocol, server application port number<br />- client IP address, protocol, client port number<br /><br />ICMP - Internet Control Message Protocol<br />- used for administrative requests<br />- not used for data transfer<br />- device availability<br />- network reachibility</div></body></html>

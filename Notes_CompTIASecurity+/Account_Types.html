@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Account Types</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Account Types</h1><br/>User accounts<br />- an account on a computer associated with a specific person<br />   → the computer associates the user with a specific identification number<br />- storage and files can be private to that user<br />   → even if another person is using the same computer<br />- no privileged access to the OS<br />   → specifically not allowed on a user account<br />- this is the account type most people will use<br />   → your user community<br /><br />Shared and generic accounts<br />- shared account<br />   → used by more than one person<br />   → guest login, anonymous login<br />- very difficult to create an audit trail<br />   → no way to know exactly who was working<br />   → difficult to determine the proper privileges<br />- password management becomes difficult<br />   → password changes require notifying everyone<br />   → difficult to remember so many password changes<br />   → just write it down on this yellow sticky paper<br />- best practice<br />   → don't use these accounts<br /><br />Service accounts<br />- used exclusively by services running on a computer<br />   → no interactive/user access (ideally)<br />   → web server, database server, etc.<br />- access can be defined for a specific service<br />   → web server rights and permissions will be different than a database server<br />- commonly use usernames and passwords<br />   → you'll need to determine the best policy for password updates<br /><br />Privileged accounts<br />- elevated access to one or more systems<br />   → administrator, root<br />- complete access to the system<br />   → often used to manage hardware, drivers, and software installation<br />- this account should not be used for normal administration<br />   → user accounts should be used<br />- needs to be highly secured<br />   → strong passwords, 2FA<br />   → scheduled password changes<br /><br /><br /><br /><br /></div></body></html>

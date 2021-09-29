@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>States of Data</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">States of Data</h1><br/>Data in-transit<br />- data transmitted over the network<br />   → also called data in-motion<br />- not much protection as it travels<br />   → many different switches, routers, devices<br />- network-based protection<br />   → Firewall, IPS<br />- provide transport encryption<br />   → TLS (Transport Layer Security)<br />   → IPsec (Internet Protocol Security)<br /><br />Data at-rest<br />- the data is on a storage device<br />   → hard drive, SSD, flash drive, etc.<br />- encrypt the data<br />   → whole disk encryption<br />   → database encryption<br />   → file- or folder-level encryption<br />- apply permissions<br />   → access control lists<br />   → only authorized users can access the data<br /><br />Data in-use<br />- the data is in memory<br />   → System RAM, CPU registers and cache<br />- the data is almost always decrypted<br />   → otherwise, you couldn't do anything with it<br />- the bad guys can pick the decrypted information out of RAM<br />   → a very attractive option<br />- Target Corp. breach - November 2013<br />   → 110 million credit cards<br />   → data in-transit encryption<br />   → data at-rest encryption<br />   → bad guys picked the credit card numbers out of the point-of-sale RAM<br /></div></body></html>

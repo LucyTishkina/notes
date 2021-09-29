@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Provisioning and Deprovisioning</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Provisioning and Deprovisioning</h1><br/>Provisioning<br />- deploy an application<br />   → web server, database server, middleware server, user workstation configurations, certificate updates, etc.<br />- application software security<br />   → OS, application<br />- network security<br />   → secure VLAN, internal access, external access<br />- software deployed to workstations<br />   → check executables for malicious code, verify security posture of the workstation<br /><br />Orchestation<br />- automation is the key to cloud computing<br />   → services appear and disappear automatically, or at the push of a button<br />- entire application instances can be instantly provisioned<br />   → all servers, networks, switches, firewalls, and policies<br />- instances can move around the world as needed<br />   → follow the sun<br />- the security policies should be part of the orchestration<br />   → as applications are provisioned, the proper security is automatically included<br /><br />Deprovisioning<br />- dismantling and removing an application instance<br />   → all good things<br />- security deprovisioning is important<br />   → don't leave open holes, don't close important ones<br />- firewall policies must be reverted<br />   → if the application is gone, so is the access<br />- what happens to the data?<br />   → don't leave information out there<br /><br /></div></body></html>

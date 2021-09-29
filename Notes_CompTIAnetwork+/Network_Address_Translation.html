@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Network Address Translation</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Network Address Translation</h1><br/>NAT (Network Address Translation)<br />- it is estimated that there are over 20 billion devices connected to the Internet (and growing)<br />   → IPv4 supports around 4.29 billion addresses<br />- the address space for IPv4 space is exhausted<br />   → there are no available addresses to assign<br />- How does it all work?<br />   → Network Address Translation<br />- Not the only use of NAT<br />   → NAT is handy in many situations<br /><br />Public addresses vs private addresses<br />RFC 1918 private IPv4 addresses<br /><br />Classful Description: Class A<br />- IP address range 10.0.0.0-10.255-255.255 <br />- Number of addresses 16, 777, 216<br />- Largest CIDR block (subnet mask) 10.0.0.0/8 (255.0.0.0)<br />- Host ID size 24 bits<br /><br />Classful Description: 16 contiguous class B's<br />- IP address range 172.16.0.0 - 172.31.255.255 <br />- Number of addresses 1, 048, 576<br />- Largest CIDR block (subnet mask) 172.16.0.0/12(255.240.0.0)<br />- Host ID size 20 bits<br /><br />Classful Description: 256 contiguous class C's<br />- IP address range 192.168.0.0 - 192.168.255.255<br />- Number of addresses 65, 536<br />- Largest CIDR block (subnet mask) 192.168.0.0/16 (255.255.0.0)<br />- Host ID size 16 bits<br /><br />Network Address Translation<br />- router converts any private addresses for outgoing traffic<br />- translates back addresses for incoming traffic<br /><br />NAT overload/PAT (port address translation)<br />- or source NAT (the source IP is translated)<br />- used when there are multiple devices<br /><br />Port forwarding<br />- 24x7 access to a service hosted internally<br />   → web server, gaming server, security system, etc.<br />- External IP/port number maps to an internal IP/port<br />   → Does not have to be the same port number<br />- Also Destination NAT or Static NAT<br />   → destination address is translated from a public IP to a private IP<br />   → does not expire or timeout</div></body></html>

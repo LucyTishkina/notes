@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Wireless Encryption</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Wireless Encryption</h1><br/>Wireless encryption<br />- All wireless computers are radio transmitters and receivers<br />   → anyone can listen in<br />- solution: encrypt the data<br />   → everyone gets the password<br />   → or their own password<br />- only people with the password can transmit and listen<br />   → WPA and WPA2<br /><br />WPA (Wi-Fi Protected Access)<br />- 2002 - WPA was the replacement for serious cryptographic weakness in WEP (Wired Equivalent Privacy)<br />   → DON'T USE WEP!!<br />- Needed a short-term bridge between WEP and whatever would be the successor<br />   → Run on existing hardware<br />- WPA: RC4 with TKIP (Temporal Key Integrity Protocol)<br />   → Initialization Vector (IV) is larger and an encrypted hash<br />   → Every packet gets a unique 128-bit encryption key<br /><br />Temporal Key Integrity Protocol<br />- Mixed the keys<br />   → combines the secret root key with the IV<br />- adds sequence counter<br />   → prevents replay attacks<br />- implements 64-bit Message Integrity Check<br />   → protects against tampering<br />- TKIP has it's own set of vulnerabilities<br />   → Deprecate in the 802.11-2012 standard<br /><br />WPA2 and CCMP<br />- WPA2 certification began in 2004<br />   → AES (Advanced Encryption Standard) replaced RC4<br />   → CCMP (Counter Mode with Cipher Block Chaining Message Authentication Code Protocol) replaced TKIP<br />- CCMP block cipher mode<br />   → Uses AES for data confidentiality<br />   → 128-bit key and a 128-bit block size<br />   → requires additional computing resources<br />- CCMP security services<br />   → Data confidentiality (AES), authentication, and access control<br /><br /></div></body></html>

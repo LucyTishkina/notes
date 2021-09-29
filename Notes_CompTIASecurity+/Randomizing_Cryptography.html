@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Randomizing Cryptography</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Randomizing Cryptography</h1><br/>Cryptography without randomization<br />- predictable<br /><br />Cryptographic nonce<br />- arbitrary number<br />   → used once<br />   → “for the nonce” - for the time being<br />- a random or pseudo-random number<br />   → something that can't be reasonably guessed<br />   → can also be a counter<br />- use a nonce during the login process<br />   → server gives you a nonce<br />   → calculate your password hash using the nonce<br />   → each password hash sent to the host will be different, so a replay won't work<br /><br />Initialization vectors<br />- a type of nonce<br />   → used for randomizing an encryption scheme<br />   → the more random the better<br />- used in encryption ciphers, WEP, and older SSL implementations<br /><br />Salt<br />- a nonce most commonly associated with password randomization<br />   → make the password hash unpredictable<br />- password storage should always be salted<br />   → each user gets a different salt<br />- if the password database is breached, you can't correlate any passwords<br />   → even users with the same password have different hashes stored<br /><br /><br /><br /></div></body></html>

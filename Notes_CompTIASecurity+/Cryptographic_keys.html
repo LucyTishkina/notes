@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Cryptographic keys</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Cryptographic keys</h1><br/>Cryptographic keys<br />- there's very little that isn't known about the cryptographic process<br />   → the algorithm is usually a known entity<br />   → the only thing you don't know is the key<br />- the key determines the output<br />   → encrypted data<br />   → hash value<br />   → digital signature<br />- keep your key private<br />   → it's they only thing protecting your data<br /><br />Key strength<br />- larger keys tend to be more secure<br />   → prevent brute-force attacks<br />   → attackers can try every possible key combination<br />- symmetric encryption<br />   → 128-bit or larger symmetric keys are common<br />   → these numbers get larger as time goes on<br />- asymmetric encryption<br />   → complex calculations of prime numbers<br />   → larger keys than symmetric encryption<br />   → common to see key lengths of 3072 bits or larger<br /><br />Key exchange<br />- a logistical challenge<br />   → how do you transfer an encryption key across an insecure medium without having an encryption key?<br />- out-of-band key exchange<br />   → don't send the symmetric key over the Internet<br />   → telephone, courier, in-person, etc.<br />- in-band key exchange<br />   → it's on the network<br />   → protect they key with additional encryption<br />   → use asymmetric encryption to deliver a symmetric key<br /><br />Real-time encryption/decryption<br />- there's a need for fast security<br />   → without compromising the security part<br />- share a symmetric session key during asymmetric encryption<br />   → client encrypts a random (symmetric) key with a server's public key<br />   → the server decrypts this shared key and uses it to encrypt data<br />   → this is the session key<br />- implement session keys carefully<br />   → need to be changed often (ephemeral keys)<br />   → need to be unpredictable<br /><br /></div></body></html>

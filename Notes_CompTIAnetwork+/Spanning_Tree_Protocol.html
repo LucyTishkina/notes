@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Spanning Tree Protocol</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Spanning Tree Protocol</h1><br/>Loop protection<br />- connect two switches to each other<br />   → create a loop with two cables<br />   → they'll send traffic back and forth forever<br />   → there's no counting mechanism at the MAC layer<br />- This is an easy way to bring a network down<br />   → and somewhat difficult to troubleshoot<br />   → relatively easy to resolve<br />- IEEE standard 802.1D to prevent loops in bridged (switched) networks (1990)<br />   → created by Radia Perlman<br />   → used practically everywhere<br /><br />STP port states<br />- Blocking<br />   → not forwarding to prevent a loop<br />- Listening<br />   → not forwarding and cleaning the MAC table<br />- Learning<br />   → not forwarding and adding to the MAC table<br />- Forwarding<br />   → data passes through and is fully operational<br />- Disabled<br />   → administrator has turned off the port<br /><br />Spanning tree protocol<br />- one root switch<br />- each other switch has a root port, closest to the root switch<br />- designated port - other interfaces that allow traffic to pass through<br />- blocked port - disabled ports<br />- if connection is severed, will reconfigure the network to a working state<br /><br />RSTP (802.1w)<br />Rapid Spanning Tree Protocol<br />- update of STP<br />- latest standard <br />- faster convergence<br />   → from 30-50 seconds to 6 seconds<br />- backwards-compatible with 802.1D STP<br />   →  can mix both in a network<br />- very similar process<br />   → an update, not a wholesale change</div></body></html>

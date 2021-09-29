@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Broadcast domains</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Broadcast domains</h1><br/>Collision domains<br />- a historical footnote<br />   → it's difficult to find a collision these days<br />   → the word “collision” is misleading<br />- the network was one big segment<br />   → everyone heard everyone else's signals<br />   → one big conference call<br />- only one station can “talk” at a time<br />   → is the line clear? ok I can talk<br />      ⇒ Carrier Sense Multiple Access (CSMA)<br />- When two people spoke at the same time, there was a collision<br />   → Collision Detection (CD)<br />   → Send the jam signal<br />- Added switches to segment networks into collision domains so that the impact of collisions would be limited to devices in each collision domain<br />- modern networks have removed collisions (full-duplex)<br /><br />Broadcast domains<br />- Spread the word!<br />   → ARP requests<br />   → Operating system notifications<br />   → Some dynamic routing protocols<br />- How far can a broadcast go?<br />   → passed by a switch/bridge<br />   → stops at the router<br />- This can be important<br />   → more devices, more broadcasts<br />   → still want to segment networks into domains<br />   → can use routers to segment networks into broadcast domains</div></body></html>

@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Assigning IPv4 addresses</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Assigning IPv4 addresses</h1><br/>DHCP<br />- IPv4 address configuration used to be manual<br />   → IP address, subnet mask, gateway, DNS servers, NTP servers, etc.<br />- October 1993<br />   → BOOTP: the bootstrap protocol<br />- BOOTP didn't automatically define everything<br />   → some manual configurations were still required<br />   → BOOTP also didn't know when an IP address might be available again<br />- Dynamic Host Configuration Protocol (DHCP)<br />   → initially released in 1997, updated through the years<br />   → Provides automatic address / IP configuration for almost all devices<br /><br />Turning dynamic into static<br />- DHCP assigns an IP address from the first available from a large pool of addresses<br />   → Your IP address will occasionally change<br />- You many not want your IP address to change<br />   → server, printer, or personal preference<br />- Disable DHCP on the device<br />   → Configure the IP address information manually<br />   → requires additional administration<br />- Configure an IP reservation on the DHCP server<br />   → Associate a specific MAC address with an IP address<br /><br />Automatic Private IP addressing (APIPA)<br />- A link-local address<br />   → no forwarding by routers<br />- IETF has reserved 169.254.0.1 - 169.254.255.254<br />   → first and last 256 addresses are reserved<br />   → functional block of 169.254.1.0-169.254.254.255<br />- Automatically assigned<br />   → Uses ARP to confirm the address isn't currently in use<br /><br /></div></body></html>

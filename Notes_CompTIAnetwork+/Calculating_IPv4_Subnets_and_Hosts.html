@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Calculating IPv4 Subnets and Hosts</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Calculating IPv4 Subnets and Hosts</h1><br/>Why subnet the network?<br />- security<br />- segmentation<br />- can't connect every device in the world to every other device<br /><br /><br />VLSM (Variable Length Subnet Masks)<br />- Class-based networks are inefficient<br />   → The subnet mask is based on the network class<br />- Allow network administrators to define their own masks<br />   → customize the subnet mask to specific network requirements<br />- Use different subnet masks in the same classful network<br />   → 10.0.0.0/8 is the class A network<br />   → 10.0.1.0/24 and 10.0.8.0/26 would VLSM<br /><br /><br />Defining subnets<br />- IP address 10.0.0.0<br />- Class A, subnet mask 255.0.0.0<br />- “classful addressing”<br />- 11111111.00000000.00000000.00000000<br />- 255.0.0.0<br />- /8<br /><br />Can change the subnet mask so that there are more networks and fewer hosts<br />- 11111111.11111111.11111111.00000000<br />- 255.255.255.0<br />- /24<br />- “classless” addressing<br /><br />Calculating subnets and hosts<br />Power of 2<br />Number of subnets: 2^subnet bits<br />Hosts per subnet: 2^host bits - 2 [remove broadcast and network address]<br /><br />IP address 10.1.1.0/24<br />Network = 8 bits<br />Subnet = 16 bits<br />Host = 8 bits<br />Total subnets = 16 bits = 2^16 = 65536<br />Hosts per subnet = 8 bits = 2^8 - 2 = 254<br /><br />IP address 192.168.11.0/26<br />11111111.11111111.11111111.11000000<br />Network =  24 bits<br />Subnet = 2 bits<br />Host = 6 bits<br />Total subnets = 2^2 = 4<br />Hosts per subnet = 2^6 - 2 = 62<br /><br />IP address 172.16.55.0/21<br />Network 16 bits<br />Subnet 5 bits<br />Host 11 bits<br />Total subnets = 2^5 = 32<br />Hosts per subnet = 2^11 - 2 = 2046<br /><br /></div></body></html>

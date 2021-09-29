@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Peripheral Security</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Peripheral Security</h1><br/>Wireless keyboards and mice<br />- many wireless keyboards and mice communicate in the clear<br />   → use proprietary wireless communication protocols<br />   → over 2.4 GHz frequencies<br />- easy to capture keystrokes with a receiver<br />   → inject keystrokes and mouse movements<br />   → control the computer remotely<br />   → vulnerability called “KeySniffer”<br />- some keyboard manufacturers support AES encryption<br /><br />Displays<br />- electromagnetic radiation<br />   → view information on a screen by eavesdropping the EM signals<br />   → internal signals of a laptop or external cable<br />   → eavesdrop through the walls<br />- firmware hacks<br />   → many displays have no security for firmware upgrades<br />   → log information on the screen<br />   → ransomware with an LCD display<br /><br />Wi-Fi-enabled microSD cards<br />- combination SD flash storage device and 802.11 Wi-Fi file transfers<br />   → transfer from a camera to a computer without removing the SD card<br />- SD card authentication vulnerabilities<br />   → predictable access, easy to read files over Wi-Fi<br />- API access to the SD card<br />   → manufacturer must implement strong security<br />   → API access can result in data leakage or data loss<br /><br />Printers/multi-function devices<br />- multi-function devices<br />   → printer, scanner, fax<br />   → network connectivity<br />   → local storage<br />- reconnaissance<br />   → log files for all activity, address books<br />- unauthorized access<br />   → print without authentication<br />- gather information<br />   → capture spool files<br /><br />External storage devices<br />- storage outside the computer, and often removable<br />   → very portable, easy to move large files<br />- limited authentication<br />   → anyone can connect and read<br />   → always use file/volume encryption<br />- often used for exfiltration of data<br />   → manage the use of removal storage<br /><br />Digital cameras<br />- capture still images and video<br />   → save to digital storage<br />- device operates as external storage<br />   → easy to move data around<br />- camera firmware can be compromised<br />   → security cameras are also vulnerable<br />- </div></body></html>

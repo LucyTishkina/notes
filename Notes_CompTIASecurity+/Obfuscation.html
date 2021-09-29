@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Obfuscation</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Obfuscation</h1><br/>Obfuscation<br />- the process of making something unclear<br />   → it's now much more difficult to understand<br />- but it's not impossible to understand<br />   → if you know how to read it<br />- make source code difficult to read<br />   → but it doesn't change the functionality of the code<br />- hide information inside of an image<br />   → steganography<br /><br />XOR (exclusive OR) cipher<br />- outputs true when inputs differ<br />- used extensively in cryptography<br />   → with a truly random key, the results are theoretically unbreakable<br /><br />Substitution ciphers<br />- simple substitution<br />   → plaintext alphabet: ABCDE...<br />   → ciphertext alphabet: ZEBRASCDFGHIJLKMNOPQTUVWXY<br />   → WE ARE DISCOVERED enciphers to VA ZOA RFPBLUAOAR<br />- Caesar cipher<br />   → substitute one letter with another at a fixed position<br />   → substitute E with B<br />- hack these ciphers with frequency analysis or brute force<br />   → if you know the system, you can decrypt it<br /><br />ROT13<br />- ROT13 - rotate by 13 places<br />   → Substitute one letter with another<br />   → ROT13 - “URYYB” is “HELLO”<br />- commonly found in online forums<br />   → obfuscate spoilers<br />   → it's there in plain view<br />   → but you can't read it<br /><br /></div></body></html>

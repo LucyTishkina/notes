@@ -1,0 +1,16 @@
+<!doctype html><html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Wireless Disassociation Attacks</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles3.css" type="text/css" />
+  
+    <script type="text/javascript">
+        function in_frame () { try { return window.self !== window.top; } catch (e) { return true; } }
+        if (!in_frame()) {
+            var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+            window.location = 'index.html#' + page;
+        }
+    </script>
+</head>
+<body><div class="page"><h1 class="title">Wireless Disassociation Attacks</h1><br/>It started as a normal day<br />- surfing along on your wireless network<br />   → and then you're not<br />- and then it happens again<br />   → and again<br />- you may not be able to stop it<br />   → there's (almost) nothing you can do<br />   → time to get a long patch cable<br />- wireless deauthentication / disassociation<br />   → a significant wireless DoS attack<br /><br />802.11 management frames<br />- 802.11 wireless includes a number of management features<br />   → frames that make everything works<br />   → you never see them<br />- important for the operation of 802.11 wireless<br />   → how to find access points, manage QoS, associate/disassociate with an access point, etc.<br />- original wireless standards did not add protection for management frames<br />   → sent in the clear <br />   → no authentication or validation<br /><br />Protecting against deauth<br />- IEEE has already addressed the problem<br />   → 802.11w - July 2014<br />- Some of the important management frames are encrypted<br />   → disassociate, deauthenticate, channel switch announcements, etc.<br />- not everything is encrypted<br />   → beacons, probes, authentication, association<br />   → cart before the horse<br />- 802.11w is required for 802.11ac compliance<br />   → this will roll out going forward</div></body></html>
